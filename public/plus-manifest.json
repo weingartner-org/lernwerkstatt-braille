@@ -1,0 +1,29 @@
+{
+  "name": "Plus - Rechnen im Kopf und auf der Zeile",
+  "short_name": "Plus",
+  "description": "Rechen-Training für die 1. bis 8. Schulstufe, von Sensorik",
+  "start_url": "/programme/plus",
+  "scope": "/programme/plus",
+  "display": "standalone",
+  "background_color": "#FBFBFD",
+  "theme_color": "#FBFBFD",
+  "lang": "de",
+  "icons": [
+    {
+      "src": "/plus-logo-180.png?v=4",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/plus-logo-512.png?v=4",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/plus-logo.svg?v=4",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

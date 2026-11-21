@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 4 56 56" role="img" aria-label="Plus" stroke-linejoin="round" stroke-linecap="round">
+  <title>Plus</title>
+  <desc>Eine grüne Taste mit abgerundeten Ecken. Darauf zwei weiße Sprechblasen. In der hinteren, kleinen steht das Wort plus in Braille, in der vorderen, großen ein Pluszeichen.</desc>
+  <!-- Plus-Zeichen (29.09.2026): zwei Sprechblasen. Johannes hat es aus
+       zwei Runden Entwürfen gewählt („jetzt ist das fesch"). Das schlichte
+       grüne Plus vom 23.09. las sich wie ein Apothekenschild.
+       Hinten „plus" in Braille, Basisschrift ohne Großschreibzeichen:
+       p 1234 · l 123 · u 136 · s 234 (abgeglichen mit Punktgenau,
+       src/lib/braille/tables.ts). Die Punkte sind AUSSPARUNGEN in
+       Tastenfarbe, keine dritte Farbe - wie bei Punktgenau.
+       Bei 16 Punkten wird das Braille zum Muster; lesbar bleibt das Plus.
+       Das Plus ist GEZEICHNET (kein <text>): Ein Favicon lädt keine
+       Schriften nach.
+       Quelle mit src/components/PlusLogo.tsx und dem Startbild in index.html
+       identisch zu halten - der Wächter tests/mathecoach-zeichen.test.ts
+       vergleicht alle drei.
+       Taste #00AA9E (helles Türkis, 21.10.2026, wie die App; vorher Grün #1F8427). Blasen WEISS (Johannes), Braillepunkte DUNKEL #032B28 (5,4:1), Plus in mittlerem Türkis #00857C (4,5:1 auf Weiß); Blase gegen Taste ~2,9:1. Älterer Text (11.10.2026, Johannes: Schiefer sei
+       schön, aber nicht positiv): 4,63:1 gegen den weißen Glyph. Das Grün
+       liegt zwischen Oliv (Hörbuch) und Türkis (Mathecoach) und ist reiner
+       und heller als beide; die Form unterscheidet ohnehin.
+       Die PNG-Fassungen erzeugt `node scripts/plus-logo-png.mjs` aus genau
+       dieser Datei. -->
+  <!-- LEICHTE PLASTIK (08.09.2026, Johannes: „versuche alle ikons leicht
+       plastisch zu machen ohne sonst etwas zu verändern"). Ein Verlauf über
+       der Taste, der nach unten NUR ABDUNKELT - Licht von oben, nichts an der
+       Geometrie gerührt. Aufgehellt wird nie. -->
+  <defs>
+    <linearGradient id="plus-tiefe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="13" fill="#00AA9E"/>
+  <rect x="4" y="4" width="56" height="56" rx="13" fill="url(#plus-tiefe)"/>
+  <!-- weicher Schlagschatten unter den Blasen (nur Schwarz, wie der Verlauf) -->
+  <rect x="26" y="9.2" width="30" height="17" rx="6" fill="#000000" fill-opacity="0.18"/>
+  <rect x="7" y="24.4" width="38" height="28" rx="9" fill="#000000" fill-opacity="0.2"/>
+  <!-- hintere Blase mit „plus" in Braille -->
+  <rect x="26" y="8" width="30" height="17" rx="6" fill="#FBFBFD"/>
+  <path d="M50 23 L53.5 28.5 L45 24.5 Z" fill="#FBFBFD" stroke="#FBFBFD" stroke-width="1.2"/>
+  <circle cx="30.4" cy="13.9" r="0.95" fill="#032B28"/>
+  <circle cx="30.4" cy="16.5" r="0.95" fill="#032B28"/>
+  <circle cx="30.4" cy="19.1" r="0.95" fill="#032B28"/>
+  <circle cx="33" cy="13.9" r="0.95" fill="#032B28"/>
+  <circle cx="36.6" cy="13.9" r="0.95" fill="#032B28"/>
+  <circle cx="36.6" cy="16.5" r="0.95" fill="#032B28"/>
+  <circle cx="36.6" cy="19.1" r="0.95" fill="#032B28"/>
+  <circle cx="42.8" cy="13.9" r="0.95" fill="#032B28"/>
+  <circle cx="42.8" cy="19.1" r="0.95" fill="#032B28"/>
+  <circle cx="45.4" cy="19.1" r="0.95" fill="#032B28"/>
+  <circle cx="49" cy="16.5" r="0.95" fill="#032B28"/>
+  <circle cx="49" cy="19.1" r="0.95" fill="#032B28"/>
+  <circle cx="51.6" cy="13.9" r="0.95" fill="#032B28"/>
+  <!-- vordere Blase mit dem Pluszeichen; der Rand in Tastenfarbe trennt sie
+       von der hinteren -->
+  <rect x="7" y="23" width="38" height="28" rx="9" fill="#FBFBFD" stroke="#00AA9E" stroke-width="1.6"/>
+  <path d="M13.5 49.5 C13.5 53.5 12 55.5 9.5 57 C14.5 57 19.5 55 23.5 49.5 Z" fill="#FBFBFD" stroke="#FBFBFD" stroke-width="0.8"/>
+  <path d="M26 29 V45 M18 37 H34" stroke="#00857C" stroke-width="6" fill="none"/>
+</svg>

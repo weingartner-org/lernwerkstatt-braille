@@ -1,0 +1,105 @@
+/**
+ * Zeichen von Klangpunkte (07.09.2026): ein K mit den Braillepunkten des
+ * Buchstabens k, daneben ein Violinschlüssel.
+ * 
+ * ★★★ k = PUNKTE 1 und 3 - gemessen in src/lib/braille/tables.ts. Beide
+ * liegen in der linken Spalte der Zelle, also im senkrechten Strich des K;
+ * die Lücke dazwischen ist der fehlende Punkt 2 und gehört zum Zeichen.
+ * Die Zeilenhöhen sind dieselben wie bei Punktgenau - die zwei
+ * Braille-Apps benutzen dasselbe Zellenraster.
+ * 
+ * ★★ DER VIOLINSCHLÜSSEL IST EINE ECHTE GLYPHE, nicht handgezeichnet
+ * (Johannes, 07.09.: „nimm bitte beim violinschlüssel eine Glyphe und mach
+ * es nicht selbst"). Es ist derselbe gemeinfreie Pfad, den die App in
+ * src/components/klangpunkte/NotenZeile.tsx für ihre Notenzeile benutzt
+ * (Wikimedia Commons „Treble clef.svg", Public Domain). Damit trägt das
+ * Zeichen denselben Schlüssel, den ein Kind in der App sieht.
+ * ⚠️ Die installierten Schriften mit U+1D11E sind Apple-Systemschriften -
+ * die dürfen nicht in ein Logo.
+ * 
+ * ★★ DIE PUNKTE SITZEN MITTIG IM STAMM (x 14,05). Solange der Stamm unten
+ * zurücksprang, war 13,3 ein Kompromiss zwischen oben (14,05) und unten
+ * (13,25); seit er durchgezogen ist, gibt es nur noch eine Mitte.
+ * 
+ * ★★ DER STAMM DES K IST GERADE GEZOGEN. Gemessen am Bild: oben reicht er
+ * bis x 17,50, ab der unteren Diagonale nur noch bis 15,90 - dieser Absatz
+ * war das Eckerl (Johannes, 07.09.). Das weiße Rechteck über die volle
+ * Stammhöhe zieht die rechte Kante durch.
+ * ⚠️ Aus demselben Grund ist die Stammmitte für die Punkte GEMESSEN
+ * (x 13,3) und nicht gerechnet: Die Formel „linke Kante + Strich/2" gilt
+ * nur, wo der Stamm allein steht.
+ * 
+ * Das K kommt aus Atkinson Hyperlegible Regular (Größe 40, Grundlinie 45),
+ * in Pfade umgewandelt. Gerundet über den Wulst (3,2 ⇒ Radius 1,6).
+ * 
+ * ZWEI Farben (Johannes, 07.09.): Taste #4B3B8F (Indigo, 8,75:1 zu Weiß)
+ * und der weiße Buchstabe; die Braillepunkte tragen die Tastenfarbe, sind
+ * also Aussparungen im Buchstaben.
+ * 
+ * ⚠️ Diese Datei, src/components/KlangpunkteLogo.tsx und das Startbild in
+ * index.html müssen dieselbe Geometrie tragen; der Wächter
+ * tests/mathecoach-zeichen.test.ts vergleicht sie.
+ * PNGs: node scripts/klangpunkte-logo-png.mjs
+ *
+ * Zwei Auftritte, wie bei den Geschwistern: ohne `beschreibung` dekorativ
+ * (aria-hidden, der Name steht daneben), mit `beschreibung` ein echtes Bild
+ * mit Bildbeschreibung.
+ */
+export const KLANGPUNKTE_LOGO_BESCHREIBUNG =
+  "Das Zeichen von Klangpunkte: eine indigoblaue Taste mit abgerundeten " +
+  "Ecken. Darin links ein großes weißes K, in dessen senkrechtem Strich zwei " +
+  "dunkelblaue Punkte liegen - die Braillepunkte des Buchstabens k -, und " +
+  "rechts daneben ein weißer Violinschlüssel.";
+
+export function KlangpunkteLogo({
+  className,
+  beschreibung,
+}: {
+  className?: string;
+  /** true = Standard-Bildbeschreibung; eigener Text überschreibt sie. */
+  beschreibung?: boolean | string;
+}) {
+  const label =
+    typeof beschreibung === "string"
+      ? beschreibung
+      : beschreibung
+        ? KLANGPUNKTE_LOGO_BESCHREIBUNG
+        : undefined;
+  return (
+    <svg
+      viewBox="4 4 56 56"
+      className={className}
+      role={label ? "img" : undefined}
+      aria-label={label}
+      aria-hidden={label ? undefined : "true"}
+      focusable="false"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    >
+      {/* Leichte Plastik (08.09.2026): der Verlauf über der Taste
+          dunkelt nach unten ab und hellt NIE auf - sonst fällt der
+          weiße Glyph unter seine gemessenen 4,5:1. Dieselben Werte
+          stehen in public/klangpunkte-logo.svg und im Startbild in index.html. */}
+      <defs>
+        <linearGradient id="klangpunkte-tiefe" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#000000" stopOpacity="0" />
+          <stop offset="0.55" stopColor="#000000" stopOpacity="0.05" />
+          <stop offset="1" stopColor="#000000" stopOpacity="0.2" />
+        </linearGradient>
+      </defs>
+      <rect x="4" y="4" width="56" height="56" rx="13" fill="#4B3B8F" />
+      <rect x="4" y="4" width="56" height="56" rx="13" fill="url(#klangpunkte-tiefe)" />
+      {/* das K aus Atkinson Hyperlegible Regular, in Pfade umgewandelt */}
+      <path d="M15.94 45L12.18 45L12.18 18.28L15.94 18.28L15.94 31.72L27.98 18.28L32.66 18.28L22.46 29.44L33.82 45L29.22 45L19.94 32.20L15.94 36.60" fill="#FBFBFD" stroke="#FBFBFD" strokeWidth="3.2" />
+      {/* den Stamm gerade ziehen - siehe Kopf */}
+      <rect x="10.6" y="16.68" width="6.9" height="29.92" rx="1.6" fill="#FBFBFD" />
+      {/* die Braillepunkte des k: 1 oben, 3 unten */}
+      <circle cx="14.05" cy="20.08" r="2.3" fill="#4B3B8F" />
+      <circle cx="14.05" cy="43.2" r="2.3" fill="#4B3B8F" />
+      {/* der Violinschlüssel - gemeinfreie Glyphe, wie in der Notenzeile */}
+      <g transform="translate(25.34 -47.43) scale(0.01033)">
+        <path d="M 2002,7851 C 1941,7868 1886,7906 1835,7964 C 1784,8023 1759,8088 1759,8158 C 1759,8202 1774,8252 1803,8305 C 1832,8359 1876,8398 1933,8423 C 1952,8427 1961,8437 1961,8451 C 1961,8456 1954,8461 1937,8465 C 1846,8442 1771,8393 1713,8320 C 1655,8246 1625,8162 1623,8066 C 1626,7963 1657,7867 1716,7779 C 1776,7690 1853,7627 1947,7590 L 1878,7235 C 1724,7363 1599,7496 1502,7636 C 1405,7775 1355,7926 1351,8089 C 1353,8162 1368,8233 1396,8301 C 1424,8370 1466,8432 1522,8489 C 1635,8602 1782,8661 1961,8667 C 2022,8663 2087,8652 2157,8634 L 2002,7851 z M 2074,7841 L 2230,8610 C 2384,8548 2461,8413 2461,8207 C 2452,8138 2432,8076 2398,8021 C 2365,7965 2321,7921 2265,7889 C 2209,7857 2146,7841 2074,7841 z M 1869,6801 C 1902,6781 1940,6746 1981,6697 C 2022,6649 2062,6592 2100,6528 C 2139,6463 2170,6397 2193,6330 C 2216,6264 2227,6201 2227,6143 C 2227,6118 2225,6093 2220,6071 C 2216,6035 2205,6007 2186,5988 C 2167,5970 2143,5960 2113,5960 C 2053,5960 1999,5997 1951,6071 C 1914,6135 1883,6211 1861,6297 C 1838,6384 1825,6470 1823,6557 C 1828,6656 1844,6737 1869,6801 z M 1806,6859 C 1761,6697 1736,6532 1731,6364 C 1732,6256 1743,6155 1764,6061 C 1784,5967 1813,5886 1851,5816 C 1888,5746 1931,5693 1979,5657 C 2022,5625 2053,5608 2070,5608 C 2083,5608 2094,5613 2104,5622 C 2114,5631 2127,5646 2143,5666 C 2262,5835 2322,6039 2322,6277 C 2322,6390 2307,6500 2277,6610 C 2248,6719 2205,6823 2148,6920 C 2090,7018 2022,7103 1943,7176 L 2024,7570 C 2068,7565 2098,7561 2115,7561 C 2191,7561 2259,7577 2322,7609 C 2385,7641 2439,7684 2483,7739 C 2527,7793 2561,7855 2585,7925 C 2608,7995 2621,8068 2621,8144 C 2621,8262 2590,8370 2528,8467 C 2466,8564 2373,8635 2248,8681 C 2256,8730 2270,8801 2291,8892 C 2311,8984 2326,9057 2336,9111 C 2346,9165 2350,9217 2350,9268 C 2350,9347 2331,9417 2293,9479 C 2254,9541 2202,9589 2136,9623 C 2071,9657 1999,9674 1921,9674 C 1811,9674 1715,9643 1633,9582 C 1551,9520 1507,9437 1503,9331 C 1506,9284 1517,9240 1537,9198 C 1557,9156 1584,9122 1619,9096 C 1653,9069 1694,9055 1741,9052 C 1780,9052 1817,9063 1852,9084 C 1886,9106 1914,9135 1935,9172 C 1955,9209 1966,9250 1966,9294 C 1966,9353 1946,9403 1906,9444 C 1866,9485 1815,9506 1754,9506 L 1731,9506 C 1770,9566 1834,9597 1923,9597 C 1968,9597 2014,9587 2060,9569 C 2107,9550 2146,9525 2179,9493 C 2212,9461 2234,9427 2243,9391 C 2260,9350 2268,9293 2268,9222 C 2268,9174 2263,9126 2254,9078 C 2245,9031 2231,8968 2212,8890 C 2193,8813 2179,8753 2171,8712 C 2111,8727 2049,8735 1984,8735 C 1875,8735 1772,8713 1675,8668 C 1578,8623 1493,8561 1419,8481 C 1346,8401 1289,8311 1248,8209 C 1208,8108 1187,8002 1186,7892 C 1190,7790 1209,7692 1245,7600 C 1281,7507 1327,7419 1384,7337 C 1441,7255 1500,7180 1561,7113 C 1623,7047 1704,6962 1806,6859 z" fill="#FBFBFD" />
+      </g>
+    </svg>
+  );
+}

@@ -1,0 +1,3772 @@
+{
+  "version": "1.0",
+  "stand": "2026-09-22",
+  "app": "plus",
+  "aufstiegsregeln": {
+    "fakten": "Zwei Runden hintereinander mit mindestens 7 von 8 richtig - und die Aufgaben mit Übergang dürfen beim selben Kind nicht deutlich länger dauern als die ohne. Das zweite Kriterium prüft, ob gerechnet oder gezählt wird.",
+    "strategie": "Zwei Runden mit mindestens 6 von 8 passend gewählten Strategien. Falsch gerechnet, aber passend gewählt zählt als halber Treffer.",
+    "schriftlich": "Zwei Runden mit mindestens 7 von 8 richtig, darunter mindestens drei Aufgaben mit Übertrag und eine mit Null an einer kritischen Stelle.",
+    "zahlbegriff": "Eine Runde mit mindestens 7 von 8 richtig. Diese Pakete werden nicht automatisiert, sie werden verstanden.",
+    "groessen": "Zwei Runden mit mindestens 7 von 8 richtig, mit mindestens zwei Umwandlungen über zwei Stufen.",
+    "sach": "Kein Aufstieg über Trefferquote. Ein Sachaufgaben-Paket gilt als bearbeitet, wenn acht Aufgaben gelöst und begründet wurden. Es bleibt danach jederzeit offen."
+  },
+  "fehlermuster": {
+    "zaehlendes_rechnen": {
+      "name": "Zählendes Rechnen",
+      "erkennung": "Aufgaben mit Zehnerübergang dauern beim selben Kind deutlich länger als Aufgaben ohne Übergang. Verglichen wird das Kind nur mit sich selbst, nie mit einer festen Zeitmarke.",
+      "antwort": "Zerlegungs- und Ableitungspakete einschieben: Kraft der Fünf, Verdoppeln, Nachbaraufgabe."
+    },
+    "stellenwert": {
+      "name": "Stellenwertfehler",
+      "erkennung": "Zahlendreher, vertauschte Zehner und Einer, Fehler häufen sich ab drei Stellen.",
+      "antwort": "Stellenwerte benennen lassen, Zahlen lesen und schreiben, Bündelungspakete."
+    },
+    "umkehrfehler": {
+      "name": "Spaltenweise Unterschiedsbildung",
+      "erkennung": "Bei der Subtraktion wird stellenweise die kleinere von der größeren Ziffer abgezogen, unabhängig von der Reihenfolge.",
+      "antwort": "Aufgaben mit genau einem Übergang, Sprechweg Schritt für Schritt."
+    },
+    "null_fehler": {
+      "name": "Null-Fehler",
+      "erkennung": "0 minus x wird 0, oder x minus 0 wird 0; bei der Division fällt die Null im Quotienten weg.",
+      "antwort": "Gezielte Päckchen mit Null an verschiedenen Stellen, Überschlag vorschalten."
+    },
+    "uebertrag": {
+      "name": "Übertrag vergessen",
+      "erkennung": "Das Ergebnis ist genau um eine Zehnerpotenz zu klein.",
+      "antwort": "Merkhilfe für den Übertrag anbieten, Aufgaben mit zwei Überträgen hintereinander."
+    },
+    "verfahren_vermischt": {
+      "name": "Ergänzen und Abziehen vermischt",
+      "erkennung": "Beim schriftlichen Subtrahieren wechselt das Verfahren mitten in der Aufgabe.",
+      "antwort": "Auf einen Weg festlegen, Sprechweg vollständig durchgehen."
+    },
+    "stellen_quotient": {
+      "name": "Stellenzahl des Quotienten",
+      "erkennung": "Das Ergebnis der Division hat eine Stelle zu wenig oder zu viel.",
+      "antwort": "Überschlag vor der Rechnung: wie viele Stellen muss das Ergebnis haben?"
+    },
+    "komma": {
+      "name": "Komma verrutscht",
+      "erkennung": "Das Ergebnis stimmt in den Ziffern, aber um den Faktor 10 oder 100 daneben.",
+      "antwort": "Komma-verschieben-Pakete, Überschlag mit glatten Zahlen."
+    },
+    "gleichnamig": {
+      "name": "Nenner mitaddiert",
+      "erkennung": "Bei der Bruchaddition werden Zähler und Nenner addiert.",
+      "antwort": "Zurück zum gleichnamigen Fall, Anteile von Mengen."
+    },
+    "vorzeichen": {
+      "name": "Vorzeichen und Rechenzeichen verwechselt",
+      "erkennung": "Minus vor der Klammer wird nicht auf alle Glieder angewendet; Vorzeichenregel bei Mal und Geteilt falsch.",
+      "antwort": "Klammerpakete mit einem einzigen Vorzeichenwechsel, dann steigern."
+    },
+    "vorrang": {
+      "name": "Vorrangregel missachtet",
+      "erkennung": "Von links nach rechts gerechnet statt Punkt vor Strich.",
+      "antwort": "Paare derselben Zahlen mit und ohne Klammer gegenüberstellen."
+    },
+    "kehrwert": {
+      "name": "Kehrwert falsch gebildet",
+      "erkennung": "Bei der Bruchdivision wird der falsche Bruch gestürzt oder gar keiner.",
+      "antwort": "Division durch natürliche Zahlen zuerst, dann durch Stammbrüche."
+    }
+  },
+  "aufgabenarten": {
+    "ergebnis": "Ergebnisaufgabe: 48 +27 =",
+    "luecke_zahl": "Lücke in der Zahl: 700 +[] =1000",
+    "luecke_zeichen": "Lücke im Rechenzeichen: 4 [] 8 =40 [] 8",
+    "kette": "Rechenkette: [] *5 =[] +20 =60",
+    "mauer": "Rechenmauer, zeilenweise mit Spaltentrenner",
+    "folge": "Zahlenfolge: 63 +5, 64 +5, 65 +5 ...",
+    "ueberschlag": "Überschlag und Schranken",
+    "probe": "Probe: stimmt das Ergebnis?",
+    "fehler_finden": "Fehler finden in einem fremden Rechenweg",
+    "strategiewahl": "Strategiewahl: wie rechnest du das am geschicktesten?",
+    "sach": "Sachaufgabe mit Frage und Antwortsatz",
+    "fermi": "Fermi-Aufgabe: schätzen und begründen",
+    "wahr_falsch": "Wahr oder falsch, mit Begründung",
+    "menge": "Mengenaufgabe: T(26) = {1; 2; 13; 26}",
+    "umwandeln": "Umwandeln: 1 t 45 kg = [] kg",
+    "zeilen": "Schriftliches Rechnen in Zeilen mit H, Z und E",
+    "dreieck": "Rechendreieck: A +B =11, B +C =13, C +A =10 - aus einer Ecke die anderen finden",
+    "zahlenhaus": "Zahlenhaus: alle Zerlegungen einer Zahl der Reihe nach",
+    "zahlenkette": "Zahlenkette: jede Zahl ist die Summe der zwei davor",
+    "malkreuz": "Malkreuz: eine Malaufgabe in Stellen zerlegt, zeilenweise mit Spaltentrenner",
+    "stoerenfried": "Störenfried: alle Zeilen stimmen, eine passt nicht ins Muster",
+    "klecks": "Tintenklecks: eine Ziffer fehlt - 38 +[]6 =94",
+    "ziffernkarten": "Ziffernkarten: größte, kleinste oder nächste Zahl aus gegebenen Ziffern",
+    "erfinden": "Aufgabe erfinden: jede passende Lösung gilt - [] +[] =12, beide ungerade",
+    "wege": "Rechenwege vergleichen: drei Kinder rechnen richtig, aber verschieden",
+    "lesen": "Genau lesen: welche Angabe brauchst du nicht, kann man das ausrechnen, welche Rechnung passt",
+    "stimmt_das": "Kann das stimmen? Größen im Alltag einschätzen"
+  },
+  "stufen": [
+    {
+      "nr": 1,
+      "name": "Der Zwanzigerraum",
+      "zahlenraum": "bis 20; bis 100 nur mit Material",
+      "leitidee": "Hier entscheidet sich alles Spätere: ob ein Kind rechnet oder zählt. Jedes Paket dieser Stufe arbeitet auf die Ablösung vom zählenden Rechnen hin, die der Lehrplan ausdrücklich zur Priorität erklärt.",
+      "pakete": [
+        {
+          "id": "1-01",
+          "name": "Zahlenreihe bis 20",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-20",
+          "strat": "Vorgänger, Nachfolger, Nachbarzahlen",
+          "gen": "Zahl z von 1 bis 19; gefragt wird Vorgänger, Nachfolger oder beide Nachbarn",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 1; Blitzrechnen 1/2",
+          "alt": null,
+          "arten": [
+            "folge",
+            "luecke_zahl",
+            "wahr_falsch"
+          ],
+          "braucht": []
+        },
+        {
+          "id": "1-02",
+          "name": "Zählen in Schritten bis 20",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-20",
+          "strat": "Zählen in Zweier-, Fünfer- und Zehnerschritten",
+          "gen": "Start s von 0 bis 6, Schrittweite 2, 5 oder 10, fünf Glieder, ein Glied fehlt",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Blitzrechnen 1/9",
+          "alt": null,
+          "arten": [
+            "folge",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "1-01"
+          ]
+        },
+        {
+          "id": "1-03",
+          "name": "Zahlen zerlegen bis 10",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-10",
+          "strat": "Zerlegen",
+          "gen": "n von 2 bis 10; a von 1 bis n-1; gefragt wird b",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 1; Blitzrechnen 1/3",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "ergebnis",
+            "mauer",
+            "zahlenhaus"
+          ],
+          "braucht": [
+            "1-01"
+          ]
+        },
+        {
+          "id": "1-04",
+          "name": "Immer 10",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-10",
+          "strat": "Ergänzen zum Zehner",
+          "gen": "a von 1 bis 9; gefragt wird die Ergänzung auf 10",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Blitzrechnen 1/4",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "ergebnis",
+            "zahlenhaus",
+            "stoerenfried"
+          ],
+          "braucht": [
+            "1-03"
+          ]
+        },
+        {
+          "id": "1-05",
+          "name": "Kraft der Fünf",
+          "art": "strategie",
+          "op": "plus",
+          "zr": "0-20",
+          "strat": "Über die Fünf zerlegen",
+          "gen": "a und b von 5 bis 9, Summe über 10; der Weg 5+5 wird abgefragt",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 1; Gaidoschik",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "ergebnis"
+          ],
+          "braucht": [
+            "1-03"
+          ]
+        },
+        {
+          "id": "1-06",
+          "name": "Verdoppeln bis 10",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-20",
+          "strat": "Verdoppeln",
+          "gen": "a von 1 bis 10; Aufgabe a plus a",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Blitzrechnen 1/6",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "folge"
+          ],
+          "braucht": [
+            "1-03"
+          ]
+        },
+        {
+          "id": "1-07",
+          "name": "Halbieren bis 20",
+          "art": "fakten",
+          "op": "geteilt",
+          "zr": "0-20",
+          "strat": "Halbieren",
+          "gen": "gerade Zahl n von 2 bis 20; gefragt wird die Hälfte",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Blitzrechnen 1/8",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "folge"
+          ],
+          "braucht": [
+            "1-06"
+          ]
+        },
+        {
+          "id": "1-08",
+          "name": "Einspluseins ohne Übergang",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-10",
+          "strat": "Faktenabruf",
+          "gen": "a und b von 1 bis 9 mit a+b kleiner gleich 10",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 1; Blitzrechnen 1/7",
+          "alt": "A1",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "dreieck",
+            "erfinden"
+          ],
+          "braucht": [
+            "1-03",
+            "1-04"
+          ]
+        },
+        {
+          "id": "1-09",
+          "name": "Einsminuseins ohne Übergang",
+          "art": "fakten",
+          "op": "minus",
+          "zr": "0-10",
+          "strat": "Faktenabruf, Ergänzen statt Abziehen",
+          "gen": "a von 2 bis 10, b von 1 bis a",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 1; Blitzrechnen 1/7",
+          "alt": "S1",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "erfinden"
+          ],
+          "braucht": [
+            "1-08"
+          ]
+        },
+        {
+          "id": "1-10",
+          "name": "Tauschaufgabe",
+          "art": "strategie",
+          "op": "plus",
+          "zr": "0-20",
+          "strat": "Tauschaufgabe",
+          "gen": "Aufgabenpaar a+b und b+a; das zweite Ergebnis soll ohne Rechnen genannt werden",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 1; BMBWF",
+          "alt": null,
+          "arten": [
+            "folge",
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "1-08"
+          ]
+        },
+        {
+          "id": "1-11",
+          "name": "Umkehraufgabe",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-20",
+          "strat": "Umkehraufgabe",
+          "gen": "zu a+b=c wird c-b oder c-a gefragt, unmittelbar danach",
+          "fehler": [
+            "zaehlendes_rechnen",
+            "umkehrfehler"
+          ],
+          "quelle": "Lehrplan 1; BMBWF",
+          "alt": null,
+          "arten": [
+            "folge",
+            "luecke_zahl",
+            "probe"
+          ],
+          "braucht": [
+            "1-08",
+            "1-09"
+          ]
+        },
+        {
+          "id": "1-12",
+          "name": "Nachbaraufgabe",
+          "art": "strategie",
+          "op": "plus",
+          "zr": "0-20",
+          "strat": "Nachbaraufgabe",
+          "gen": "bekannte Aufgabe plus oder minus eins, z. B. 6+6 dann 6+7",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Gaidoschik; PIKAS",
+          "alt": null,
+          "arten": [
+            "folge",
+            "ergebnis"
+          ],
+          "braucht": [
+            "1-08"
+          ]
+        },
+        {
+          "id": "1-13",
+          "name": "Zehnerübergang beim Plus",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-20",
+          "strat": "Teilschritt über den Zehner",
+          "gen": "a von 4 bis 9, b von 3 bis 9, Summe zwischen 11 und 18",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 1; Gaidoschik",
+          "alt": "A2",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "strategiewahl",
+            "dreieck",
+            "zahlenkette"
+          ],
+          "braucht": [
+            "1-04",
+            "1-05",
+            "1-06"
+          ]
+        },
+        {
+          "id": "1-14",
+          "name": "Zehnerübergang beim Minus",
+          "art": "fakten",
+          "op": "minus",
+          "zr": "0-20",
+          "strat": "Teilschritt über den Zehner, Ergänzen",
+          "gen": "Minuend von 11 bis 18, Subtrahend so, dass der Zehner unterschritten wird",
+          "fehler": [
+            "zaehlendes_rechnen",
+            "umkehrfehler"
+          ],
+          "quelle": "Lehrplan 1",
+          "alt": "S2",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "strategiewahl"
+          ],
+          "braucht": [
+            "1-13",
+            "1-09"
+          ]
+        },
+        {
+          "id": "1-15",
+          "name": "Verdoppeln plus eins",
+          "art": "strategie",
+          "op": "plus",
+          "zr": "0-20",
+          "strat": "Aus der Verdopplung ableiten",
+          "gen": "a von 3 bis 9; Aufgabe a plus a+1",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Gaidoschik: fehlt in allen geprüften Schulbüchern",
+          "alt": null,
+          "arten": [
+            "folge",
+            "ergebnis"
+          ],
+          "braucht": [
+            "1-06",
+            "1-12"
+          ]
+        },
+        {
+          "id": "1-16",
+          "name": "Immer 20",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-20",
+          "strat": "Ergänzen zum Zwanziger",
+          "gen": "a von 1 bis 19; gefragt wird die Ergänzung auf 20",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Blitzrechnen 1/4",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "ergebnis",
+            "zahlenhaus",
+            "stoerenfried"
+          ],
+          "braucht": [
+            "1-04",
+            "1-13"
+          ]
+        },
+        {
+          "id": "1-17",
+          "name": "Wie rechnest du das?",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-20",
+          "strat": "Strategie wählen und benennen",
+          "gen": "Aufgaben, bei denen genau eine Strategie deutlich kürzer ist als das Abzählen",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Krauthausen; Gaidoschik",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "1-05",
+            "1-10",
+            "1-12",
+            "1-15"
+          ]
+        },
+        {
+          "id": "1-18",
+          "name": "Rechengeschichten bis 20",
+          "art": "sach",
+          "op": "gemischt",
+          "zr": "0-20",
+          "strat": "Modellieren",
+          "gen": "kurze Texte mit einer Rechnung, Antwortsatz verlangt",
+          "fehler": [],
+          "quelle": "Lehrplan 1",
+          "alt": null,
+          "arten": [
+            "sach",
+            "lesen"
+          ],
+          "braucht": [
+            "1-08",
+            "1-09"
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 2,
+      "name": "Der Hunderterraum",
+      "zahlenraum": "bis 100; bis 1000 nur mit Material",
+      "leitidee": "Das Einspluseins wird automatisiert, das kleine Einmaleins erarbeitet. Gerechnet wird mündlich und halbschriftlich - schriftliche Verfahren kommen bewusst noch nicht vor.",
+      "pakete": [
+        {
+          "id": "2-01",
+          "name": "Zahlenreihe bis 100",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-100",
+          "strat": "Nachbarzehner, Vorgänger, Nachfolger",
+          "gen": "Zahl z von 1 bis 99; gefragt werden Nachbarzahlen oder Nachbarzehner",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 2; Blitzrechnen 2/3",
+          "alt": null,
+          "arten": [
+            "folge",
+            "luecke_zahl",
+            "wahr_falsch",
+            "ziffernkarten"
+          ],
+          "braucht": [
+            "1-01"
+          ]
+        },
+        {
+          "id": "2-02",
+          "name": "Zählen in Schritten bis 100",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-100",
+          "strat": "Zählen in Schritten",
+          "gen": "Schrittweite 2, 3, 5, 10 oder 25; sechs Glieder, ein Glied fehlt",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Blitzrechnen 2/3",
+          "alt": null,
+          "arten": [
+            "folge",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "2-01",
+            "1-02"
+          ]
+        },
+        {
+          "id": "2-03",
+          "name": "Zahlen zerlegen bis 100",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-100",
+          "strat": "Bündeln in Zehner und Einer",
+          "gen": "z von 11 bis 99; gefragt wird die Zerlegung in Zehner und Einer",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 2",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "ergebnis",
+            "mauer"
+          ],
+          "braucht": [
+            "2-01"
+          ]
+        },
+        {
+          "id": "2-04",
+          "name": "Ergänzen zum vollen Zehner",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-100",
+          "strat": "Ergänzen",
+          "gen": "z von 11 bis 99, nicht durch 10 teilbar; gefragt wird die Ergänzung zum nächsten Zehner",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Blitzrechnen 2/2",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "ergebnis"
+          ],
+          "braucht": [
+            "1-04",
+            "2-03"
+          ]
+        },
+        {
+          "id": "2-05",
+          "name": "Ergänzen auf 100",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-100",
+          "strat": "Ergänzen",
+          "gen": "z von 1 bis 99; gefragt wird die Ergänzung auf 100",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Blitzrechnen 2/4",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "ergebnis"
+          ],
+          "braucht": [
+            "2-04"
+          ]
+        },
+        {
+          "id": "2-06",
+          "name": "Plus ohne Zehnerübergang",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-100",
+          "strat": "Stellenwerte extra",
+          "gen": "a und b so, dass die Einerziffern zusammen höchstens 9 ergeben",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 2",
+          "alt": "A3",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "kette",
+            "dreieck",
+            "zahlenkette",
+            "erfinden"
+          ],
+          "braucht": [
+            "2-03",
+            "1-08"
+          ]
+        },
+        {
+          "id": "2-07",
+          "name": "Minus ohne Zehnerübergang",
+          "art": "fakten",
+          "op": "minus",
+          "zr": "0-100",
+          "strat": "Stellenwerte extra",
+          "gen": "Einerziffer des Minuenden größer gleich der des Subtrahenden",
+          "fehler": [
+            "umkehrfehler"
+          ],
+          "quelle": "Lehrplan 2",
+          "alt": "S3",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "kette",
+            "stoerenfried",
+            "erfinden"
+          ],
+          "braucht": [
+            "2-03",
+            "1-09"
+          ]
+        },
+        {
+          "id": "2-08",
+          "name": "Plus mit Zehnerübergang",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-100",
+          "strat": "Schrittweise über den Zehner",
+          "gen": "Einerziffern zusammen über 10",
+          "fehler": [
+            "zaehlendes_rechnen",
+            "uebertrag"
+          ],
+          "quelle": "Lehrplan 2",
+          "alt": "A3",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "kette",
+            "dreieck",
+            "zahlenkette",
+            "klecks"
+          ],
+          "braucht": [
+            "2-06",
+            "1-13"
+          ]
+        },
+        {
+          "id": "2-09",
+          "name": "Minus mit Zehnerübergang",
+          "art": "fakten",
+          "op": "minus",
+          "zr": "0-100",
+          "strat": "Schrittweise, Ergänzen",
+          "gen": "Einerziffer des Minuenden kleiner als die des Subtrahenden",
+          "fehler": [
+            "umkehrfehler",
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 2",
+          "alt": "S3",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "kette",
+            "stoerenfried",
+            "klecks"
+          ],
+          "braucht": [
+            "2-07",
+            "1-14"
+          ]
+        },
+        {
+          "id": "2-10",
+          "name": "Verdoppeln und Halbieren bis 100",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "0-100",
+          "strat": "Verdoppeln, Halbieren",
+          "gen": "z von 11 bis 50 zum Verdoppeln, gerade z von 12 bis 100 zum Halbieren",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Blitzrechnen 2/6",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "folge"
+          ],
+          "braucht": [
+            "1-06",
+            "1-07",
+            "2-03"
+          ]
+        },
+        {
+          "id": "2-11",
+          "name": "Einmaleins: die Kernaufgaben",
+          "art": "fakten",
+          "op": "mal",
+          "zr": "0-100",
+          "strat": "Kernaufgaben der 1er-, 2er-, 5er- und 10er-Reihe",
+          "gen": "Faktor a aus 1, 2, 5, 10; b von 1 bis 10",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "PIKAS; Lehrplan 2",
+          "alt": "M1, M2, M5, M10",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "folge",
+            "stoerenfried"
+          ],
+          "braucht": [
+            "2-02"
+          ]
+        },
+        {
+          "id": "2-12",
+          "name": "Quadratzahlen bis 10",
+          "art": "fakten",
+          "op": "mal",
+          "zr": "0-100",
+          "strat": "Quadratzahlen als Merkaufgaben",
+          "gen": "a von 1 bis 10; Aufgabe a mal a",
+          "fehler": [],
+          "quelle": "PIKAS Kernaufgaben",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "2-11"
+          ]
+        },
+        {
+          "id": "2-13",
+          "name": "Einmaleins ableiten durch Verdoppeln",
+          "art": "strategie",
+          "op": "mal",
+          "zr": "0-100",
+          "strat": "4er aus 2er, 8er aus 4er, 6er aus 3er",
+          "gen": "Aufgabenpaar: erst die bekannte Reihe, dann die abgeleitete",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "PIKAS",
+          "alt": "M4, M8, M6",
+          "arten": [
+            "folge",
+            "strategiewahl",
+            "ergebnis"
+          ],
+          "braucht": [
+            "2-11",
+            "2-10"
+          ]
+        },
+        {
+          "id": "2-14",
+          "name": "Einmaleins ableiten über die Nachbaraufgabe",
+          "art": "strategie",
+          "op": "mal",
+          "zr": "0-100",
+          "strat": "9er aus 10er, 7er aus 5er plus 2er",
+          "gen": "Aufgabenpaar mit ausdrücklicher Frage nach dem Weg",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "PIKAS",
+          "alt": "M3, M7, M9",
+          "arten": [
+            "folge",
+            "strategiewahl",
+            "ergebnis"
+          ],
+          "braucht": [
+            "2-11"
+          ]
+        },
+        {
+          "id": "2-15",
+          "name": "Einmaleins vermischt",
+          "art": "fakten",
+          "op": "mal",
+          "zr": "0-100",
+          "strat": "Faktenabruf",
+          "gen": "a und b von 1 bis 10, alle Reihen gemischt",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 2; Blitzrechnen 2/10",
+          "alt": "M11",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "erfinden"
+          ],
+          "braucht": [
+            "2-11",
+            "2-12",
+            "2-13",
+            "2-14"
+          ]
+        },
+        {
+          "id": "2-16",
+          "name": "Einsdurcheins",
+          "art": "fakten",
+          "op": "geteilt",
+          "zr": "0-100",
+          "strat": "Umkehrung des Einmaleins",
+          "gen": "Produkt aus dem kleinen Einmaleins, geteilt durch einen der Faktoren",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 2; Blitzrechnen 3/1",
+          "alt": "D1-D19 (ohne Rest)",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "probe"
+          ],
+          "braucht": [
+            "2-15"
+          ]
+        },
+        {
+          "id": "2-17",
+          "name": "Teilen mit Rest bis 20",
+          "art": "fakten",
+          "op": "geteilt",
+          "zr": "0-20",
+          "strat": "Aufteilen und Verteilen, Rest benennen",
+          "gen": "Dividend von 5 bis 20, Divisor von 2 bis 5, Rest ungleich null",
+          "fehler": [
+            "null_fehler"
+          ],
+          "quelle": "Alles klar! 3; KIRA",
+          "alt": "D3, D5, D7",
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "2-16"
+          ]
+        },
+        {
+          "id": "2-18",
+          "name": "Halbschriftlich Plus",
+          "art": "strategie",
+          "op": "plus",
+          "zr": "0-100",
+          "strat": "Stellenwerte extra, schrittweise, Vereinfachen",
+          "gen": "zweistellig plus zweistellig, Zwischenschritte werden notiert",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "BMBWF; Lehrplan 2",
+          "alt": null,
+          "arten": [
+            "zeilen",
+            "mauer",
+            "strategiewahl",
+            "fehler_finden",
+            "wege"
+          ],
+          "braucht": [
+            "2-06",
+            "2-08"
+          ]
+        },
+        {
+          "id": "2-19",
+          "name": "Halbschriftlich Minus",
+          "art": "strategie",
+          "op": "minus",
+          "zr": "0-100",
+          "strat": "Schrittweise, Auffüllen, Hilfsaufgabe",
+          "gen": "zweistellig minus zweistellig; je ein Drittel der Aufgaben passend zu einer der drei Strategien",
+          "fehler": [
+            "umkehrfehler"
+          ],
+          "quelle": "BMBWF; PIKAS",
+          "alt": null,
+          "arten": [
+            "zeilen",
+            "strategiewahl",
+            "fehler_finden",
+            "wege"
+          ],
+          "braucht": [
+            "2-07",
+            "2-09"
+          ]
+        },
+        {
+          "id": "2-20",
+          "name": "Wie rechnest du das?",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-100",
+          "strat": "Strategie wählen und benennen",
+          "gen": "Aufgaben, bei denen Ergänzen, Hilfsaufgabe oder Vereinfachen klar überlegen ist",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Krauthausen; PIKAS",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "2-18",
+            "2-19"
+          ]
+        },
+        {
+          "id": "2-21",
+          "name": "Rechengeschichten bis 100",
+          "art": "sach",
+          "op": "gemischt",
+          "zr": "0-100",
+          "strat": "Modellieren",
+          "gen": "Texte mit ein bis zwei Rechenschritten, Antwortsatz verlangt",
+          "fehler": [],
+          "quelle": "Lehrplan 2",
+          "alt": null,
+          "arten": [
+            "sach",
+            "lesen"
+          ],
+          "braucht": [
+            "2-08",
+            "2-09",
+            "2-15"
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 3,
+      "name": "Der Tausenderraum und die schriftlichen Verfahren",
+      "zahlenraum": "bis 1000",
+      "leitidee": "Das Einmaleins wird automatisiert, und zum ersten Mal kommen schriftliche Verfahren dazu. Entscheidend: das halbschriftliche Rechnen bricht danach erfahrungsgemäß ein - Plus hält es deshalb ausdrücklich weiter in Übung.",
+      "pakete": [
+        {
+          "id": "3-01",
+          "name": "Zahlenreihe bis 1000",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-1000",
+          "strat": "Nachbarhunderter, Stellenwert",
+          "gen": "z von 100 bis 999; gefragt werden Nachbarzahlen, Nachbarzehner, Nachbarhunderter",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 3; Blitzrechnen 3/3",
+          "alt": null,
+          "arten": [
+            "folge",
+            "luecke_zahl",
+            "wahr_falsch",
+            "ziffernkarten"
+          ],
+          "braucht": [
+            "2-01"
+          ]
+        },
+        {
+          "id": "3-02",
+          "name": "Zählen in Schritten bis 1000",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-1000",
+          "strat": "Zählen in Schritten",
+          "gen": "Schrittweite 25, 50, 100; sechs Glieder, ein Glied fehlt",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Blitzrechnen 3/4",
+          "alt": null,
+          "arten": [
+            "folge",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "3-01",
+            "2-02"
+          ]
+        },
+        {
+          "id": "3-03",
+          "name": "Ergänzen bis 1000",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-1000",
+          "strat": "Ergänzen",
+          "gen": "z von 1 bis 999; gefragt wird die Ergänzung auf den nächsten Hunderter oder auf 1000",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Blitzrechnen 3/5",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "ergebnis"
+          ],
+          "braucht": [
+            "3-01",
+            "2-05"
+          ]
+        },
+        {
+          "id": "3-04",
+          "name": "1000 teilen",
+          "art": "fakten",
+          "op": "geteilt",
+          "zr": "0-1000",
+          "strat": "Teilerkenntnis an runden Zahlen",
+          "gen": "1000 geteilt durch 2, 4, 5, 8, 10, 20, 25, 40, 50, 100",
+          "fehler": [],
+          "quelle": "Blitzrechnen 3/6",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "2-16",
+            "3-01"
+          ]
+        },
+        {
+          "id": "3-05",
+          "name": "Halbschriftlich Plus bis 1000",
+          "art": "strategie",
+          "op": "plus",
+          "zr": "0-1000",
+          "strat": "Stellenwerte extra, schrittweise",
+          "gen": "dreistellig plus dreistellig mit höchstens zwei Überträgen",
+          "fehler": [
+            "stellenwert",
+            "uebertrag"
+          ],
+          "quelle": "Lehrplan 3; BMBWF",
+          "alt": "A4, A5",
+          "arten": [
+            "zeilen",
+            "mauer",
+            "strategiewahl",
+            "kette",
+            "dreieck",
+            "zahlenkette",
+            "wege"
+          ],
+          "braucht": [
+            "2-18",
+            "3-01"
+          ]
+        },
+        {
+          "id": "3-06",
+          "name": "Halbschriftlich Minus bis 1000",
+          "art": "strategie",
+          "op": "minus",
+          "zr": "0-1000",
+          "strat": "Schrittweise, Auffüllen",
+          "gen": "dreistellig minus dreistellig",
+          "fehler": [
+            "umkehrfehler"
+          ],
+          "quelle": "Lehrplan 3; BMBWF",
+          "alt": "S4",
+          "arten": [
+            "zeilen",
+            "strategiewahl",
+            "kette",
+            "wege"
+          ],
+          "braucht": [
+            "2-19",
+            "3-01"
+          ]
+        },
+        {
+          "id": "3-07",
+          "name": "Vereinfachen und Hilfsaufgabe",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-1000",
+          "strat": "Gleichsinniges und gegensinniges Verändern",
+          "gen": "eine Zahl liegt dicht an einer glatten Zahl, z. B. 701 minus 698",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "KIRA Konstanzgesetze",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "3-05",
+            "3-06"
+          ]
+        },
+        {
+          "id": "3-08",
+          "name": "Runden auf Zehner und Hunderter",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-1000",
+          "strat": "Runden",
+          "gen": "z von 11 bis 999; Rundungsstelle wird genannt",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 3",
+          "alt": "R1, R2",
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "3-01"
+          ]
+        },
+        {
+          "id": "3-09",
+          "name": "Überschlag bei Plus und Minus",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-1000",
+          "strat": "Überschlagen vor dem Rechnen",
+          "gen": "dreistellige Aufgaben; gefragt wird zuerst der Überschlag, dann das Ergebnis",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Alles klar! 3; Lehrplan 3",
+          "alt": null,
+          "arten": [
+            "ueberschlag",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "3-08",
+            "3-05"
+          ]
+        },
+        {
+          "id": "3-10",
+          "name": "Schriftlich Plus bis 1000",
+          "art": "schriftlich",
+          "op": "plus",
+          "zr": "0-1000",
+          "strat": "Normalverfahren mit Übertrag",
+          "gen": "zwei bis drei Summanden, dreistellig, mit und ohne Übertrag",
+          "fehler": [
+            "uebertrag",
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 3; Alles klar! 3",
+          "alt": "A5",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden",
+            "klecks"
+          ],
+          "braucht": [
+            "3-05"
+          ]
+        },
+        {
+          "id": "3-11",
+          "name": "Schriftlich Minus, Ergänzungsverfahren",
+          "art": "schriftlich",
+          "op": "minus",
+          "zr": "0-1000",
+          "strat": "Ergänzen, österreichischer Weg",
+          "gen": "dreistellig minus dreistellig, mit und ohne Übergang",
+          "fehler": [
+            "umkehrfehler",
+            "verfahren_vermischt",
+            "null_fehler"
+          ],
+          "quelle": "Lehrplan 3; BMBWF",
+          "alt": "S4",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden",
+            "klecks"
+          ],
+          "braucht": [
+            "3-06"
+          ]
+        },
+        {
+          "id": "3-12",
+          "name": "Schriftlich Minus, Abziehverfahren",
+          "art": "schriftlich",
+          "op": "minus",
+          "zr": "0-1000",
+          "strat": "Entbündeln, deutscher Weg und Braille-Empfehlung",
+          "gen": "dieselben Aufgaben wie 3-11, anderer Sprechweg",
+          "fehler": [
+            "umkehrfehler",
+            "verfahren_vermischt",
+            "null_fehler"
+          ],
+          "quelle": "Krombach; BMBWF",
+          "alt": "S4",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden",
+            "klecks"
+          ],
+          "braucht": [
+            "3-06"
+          ]
+        },
+        {
+          "id": "3-13",
+          "name": "Probe durch Umkehraufgabe",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-1000",
+          "strat": "Kontrollieren",
+          "gen": "zu einer gelösten Aufgabe wird die Probe verlangt",
+          "fehler": [
+            "umkehrfehler"
+          ],
+          "quelle": "Alles klar! 3; PLUS! 1",
+          "alt": null,
+          "arten": [
+            "probe",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "1-11",
+            "3-10"
+          ]
+        },
+        {
+          "id": "3-14",
+          "name": "Einmaleins sicher",
+          "art": "fakten",
+          "op": "mal",
+          "zr": "0-100",
+          "strat": "Automatisierter Faktenabruf",
+          "gen": "alle Reihen gemischt, auch umgekehrt gefragt",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Lehrplan 3; Blitzrechnen 3/1",
+          "alt": "M11",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "folge",
+            "stoerenfried",
+            "erfinden"
+          ],
+          "braucht": [
+            "2-15"
+          ]
+        },
+        {
+          "id": "3-15",
+          "name": "Mal 10, durch 10, Zehner-Einmaleins",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "0-1000",
+          "strat": "Stellenwert verschieben",
+          "gen": "a von 2 bis 9 mal 10, 20 bis 90; und die Umkehrungen",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Blitzrechnen 3/9 und 3/10",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "folge"
+          ],
+          "braucht": [
+            "3-14",
+            "3-01"
+          ]
+        },
+        {
+          "id": "3-16",
+          "name": "Schriftlich Mal, einstelliger Multiplikator",
+          "art": "schriftlich",
+          "op": "mal",
+          "zr": "0-10000",
+          "strat": "Normalverfahren",
+          "gen": "dreistellig mal einstellig",
+          "fehler": [
+            "uebertrag",
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 3; Alles klar! 3",
+          "alt": "M12",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden",
+            "malkreuz"
+          ],
+          "braucht": [
+            "3-14",
+            "3-10"
+          ]
+        },
+        {
+          "id": "3-17",
+          "name": "Division durch eine einstellige Zahl",
+          "art": "schriftlich",
+          "op": "geteilt",
+          "zr": "0-1000",
+          "strat": "Zeilenweise mit H, Z und E",
+          "gen": "dreistellig durch einstellig, ohne Rest",
+          "fehler": [
+            "null_fehler",
+            "stellen_quotient"
+          ],
+          "quelle": "Lehrplan 3; BookAccess-Fassung",
+          "alt": "D20, D22",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "2-16",
+            "3-15"
+          ]
+        },
+        {
+          "id": "3-18",
+          "name": "Division mit Rest",
+          "art": "schriftlich",
+          "op": "geteilt",
+          "zr": "0-1000",
+          "strat": "Rest benennen und prüfen",
+          "gen": "dreistellig durch einstellig, Rest ungleich null",
+          "fehler": [
+            "null_fehler",
+            "stellen_quotient"
+          ],
+          "quelle": "Lehrplan 3",
+          "alt": "D21",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "3-17",
+            "2-17"
+          ]
+        },
+        {
+          "id": "3-19",
+          "name": "Verdoppeln und Halbieren im Tausender",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "0-1000",
+          "strat": "Verdoppeln, Halbieren",
+          "gen": "z von 100 bis 500 zum Verdoppeln, gerade z bis 1000 zum Halbieren",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Blitzrechnen 3/7",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "folge"
+          ],
+          "braucht": [
+            "2-10",
+            "3-01"
+          ]
+        },
+        {
+          "id": "3-20",
+          "name": "Wie rechnest du das?",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-1000",
+          "strat": "Strategie wählen, auch gegen das Normalverfahren",
+          "gen": "Aufgaben, bei denen der geschickte Weg deutlich kürzer ist als das schriftliche Verfahren",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "PIKAS: nach Einführung der Verfahren bricht das Zahlenrechnen ein",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "3-07",
+            "3-10",
+            "3-11"
+          ]
+        },
+        {
+          "id": "3-21",
+          "name": "Sachaufgaben bis 1000",
+          "art": "sach",
+          "op": "gemischt",
+          "zr": "0-1000",
+          "strat": "Modellieren, Frage stellen",
+          "gen": "Texte mit zwei Rechenschritten; auch Aufgaben, zu denen die Frage fehlt",
+          "fehler": [],
+          "quelle": "Alles klar! 3",
+          "alt": null,
+          "arten": [
+            "sach",
+            "fermi",
+            "lesen",
+            "stimmt_das"
+          ],
+          "braucht": [
+            "3-10",
+            "3-11",
+            "3-16",
+            "3-17"
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 4,
+      "name": "Der große Zahlenraum",
+      "zahlenraum": "bis 1 000 000",
+      "leitidee": "Derselbe Stoff, nur größer - und genau so bauen es die Schulbücher auf: der Zahlenraum wird in Stufen erweitert, und in jeder Stufe werden alle vier Verfahren neu durchgespielt.",
+      "pakete": [
+        {
+          "id": "4-01",
+          "name": "Stellenwert bis zur Million",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-1000000",
+          "strat": "Bündeln, Stellenwerttafel",
+          "gen": "z bis 1 000 000; gefragt werden Stellenwerte, Vorgänger, Nachfolger",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 4; Alles klar! 4",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "wahr_falsch",
+            "folge",
+            "ziffernkarten"
+          ],
+          "braucht": [
+            "3-01"
+          ]
+        },
+        {
+          "id": "4-02",
+          "name": "Runden im großen Zahlenraum",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-1000000",
+          "strat": "Runden auf Tausender und gemischt",
+          "gen": "z bis 1 000 000, Rundungsstelle wechselt innerhalb des Laufs",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 4",
+          "alt": "R3, R4",
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "3-08",
+            "4-01"
+          ]
+        },
+        {
+          "id": "4-03",
+          "name": "Ergänzen bis eine Million",
+          "art": "fakten",
+          "op": "plus",
+          "zr": "0-1000000",
+          "strat": "Ergänzen",
+          "gen": "z bis 999 999; Ergänzung auf den nächsten Tausender oder auf eine Million",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Blitzrechnen 4/1",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "ergebnis"
+          ],
+          "braucht": [
+            "3-03",
+            "4-01"
+          ]
+        },
+        {
+          "id": "4-04",
+          "name": "Stufenzahlen mal und geteilt",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "0-1000000",
+          "strat": "Nullen anhängen und kürzen",
+          "gen": "runde Zahlen mal und geteilt durch 10, 100, 1000",
+          "fehler": [
+            "stellenwert",
+            "null_fehler"
+          ],
+          "quelle": "Blitzrechnen 4/2 und 4/3",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "folge"
+          ],
+          "braucht": [
+            "3-15",
+            "4-01"
+          ]
+        },
+        {
+          "id": "4-05",
+          "name": "Schriftlich Plus im großen Zahlenraum",
+          "art": "schriftlich",
+          "op": "plus",
+          "zr": "0-1000000",
+          "strat": "Normalverfahren",
+          "gen": "zwei bis vier Summanden, bis sechsstellig",
+          "fehler": [
+            "uebertrag",
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 4; Alles klar! 4",
+          "alt": "A6",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden",
+            "klecks"
+          ],
+          "braucht": [
+            "3-10",
+            "4-01"
+          ]
+        },
+        {
+          "id": "4-06",
+          "name": "Schriftlich Minus im großen Zahlenraum",
+          "art": "schriftlich",
+          "op": "minus",
+          "zr": "0-1000000",
+          "strat": "Normalverfahren, beide Wege",
+          "gen": "bis sechsstellig, mit Nullen im Minuenden",
+          "fehler": [
+            "null_fehler",
+            "umkehrfehler",
+            "uebertrag"
+          ],
+          "quelle": "Lehrplan 4",
+          "alt": null,
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden",
+            "klecks"
+          ],
+          "braucht": [
+            "3-11",
+            "4-01"
+          ]
+        },
+        {
+          "id": "4-07",
+          "name": "Schriftlich Mal, zweistelliger Multiplikator",
+          "art": "schriftlich",
+          "op": "mal",
+          "zr": "0-1000000",
+          "strat": "Teilprodukte stellengerecht",
+          "gen": "vierstellig mal zweistellig",
+          "fehler": [
+            "stellenwert",
+            "uebertrag"
+          ],
+          "quelle": "Lehrplan 4; Alles klar! 4",
+          "alt": "M13",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden",
+            "malkreuz"
+          ],
+          "braucht": [
+            "3-16",
+            "4-01"
+          ]
+        },
+        {
+          "id": "4-08",
+          "name": "Division durch eine Zehnerzahl",
+          "art": "schriftlich",
+          "op": "geteilt",
+          "zr": "0-1000000",
+          "strat": "Nullen kürzen",
+          "gen": "vierstellig durch 20 bis 90",
+          "fehler": [
+            "null_fehler",
+            "stellen_quotient"
+          ],
+          "quelle": "Alles klar! 4",
+          "alt": null,
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "3-17",
+            "4-04"
+          ]
+        },
+        {
+          "id": "4-09",
+          "name": "Division durch eine zweistellige Zahl",
+          "art": "schriftlich",
+          "op": "geteilt",
+          "zr": "0-1000000",
+          "strat": "Zeilenweise, mit Überschlag zur Stellenbestimmung",
+          "gen": "vier- bis fünfstellig durch zweistellig, mit und ohne Rest",
+          "fehler": [
+            "stellen_quotient",
+            "null_fehler"
+          ],
+          "quelle": "Lehrplan 4; Stanetty 5.7-5.9",
+          "alt": "D23",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "4-08",
+            "3-18"
+          ]
+        },
+        {
+          "id": "4-10",
+          "name": "Überschlag bei Mal und Geteilt",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-1000000",
+          "strat": "Runden vor dem Rechnen",
+          "gen": "gefragt wird zuerst die Stellenzahl des Ergebnisses, dann der Überschlag",
+          "fehler": [
+            "stellen_quotient"
+          ],
+          "quelle": "PLUS! 1 Kapitel C8",
+          "alt": null,
+          "arten": [
+            "ueberschlag",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "3-09",
+            "4-07"
+          ]
+        },
+        {
+          "id": "4-11",
+          "name": "Probe bei Mal und Geteilt",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-1000000",
+          "strat": "Umkehrprobe, Rest berücksichtigen",
+          "gen": "Probe zu einer gelösten Division, auch mit Rest",
+          "fehler": [
+            "stellen_quotient"
+          ],
+          "quelle": "Stanetty; PLUS! 1",
+          "alt": null,
+          "arten": [
+            "probe",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "3-13",
+            "4-09"
+          ]
+        },
+        {
+          "id": "4-12",
+          "name": "Stellen-Einmaleins",
+          "art": "fakten",
+          "op": "mal",
+          "zr": "0-1000000",
+          "strat": "Einmaleins in höheren Stellen",
+          "gen": "a von 2 bis 9 mal 20 bis 900",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "Blitzrechnen 4/8",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "folge"
+          ],
+          "braucht": [
+            "3-15",
+            "4-01"
+          ]
+        },
+        {
+          "id": "4-13",
+          "name": "Brüche anschaulich: Halbe, Viertel, Achtel",
+          "art": "zahlbegriff",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Anteil benennen und vergleichen",
+          "gen": "Nenner aus 2, 4, 8; Zähler kleiner gleich Nenner",
+          "fehler": [],
+          "quelle": "Lehrplan 4; Alles klar! 4",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "ergebnis"
+          ],
+          "braucht": [
+            "2-10"
+          ]
+        },
+        {
+          "id": "4-14",
+          "name": "Bruchteile von Größen",
+          "art": "groessen",
+          "op": "bruch",
+          "zr": "Größen",
+          "strat": "Anteil einer Größe berechnen",
+          "gen": "Größe durch 2, 4, 8 teilbar; gefragt wird ein Anteil",
+          "fehler": [],
+          "quelle": "Lehrplan 4",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "sach"
+          ],
+          "braucht": [
+            "4-13",
+            "3-17"
+          ]
+        },
+        {
+          "id": "4-15",
+          "name": "Größen umwandeln",
+          "art": "groessen",
+          "op": "gemischt",
+          "zr": "Größen",
+          "strat": "Stellenwert in Maßeinheiten",
+          "gen": "Länge, Masse, Zeit, Geld; mindestens zwei Umwandlungen über zwei Stufen je Lauf",
+          "fehler": [
+            "stellenwert",
+            "komma"
+          ],
+          "quelle": "Lehrplan 4; Alles klar! 4",
+          "alt": null,
+          "arten": [
+            "umwandeln",
+            "wahr_falsch",
+            "stimmt_das"
+          ],
+          "braucht": [
+            "4-01",
+            "4-04"
+          ]
+        },
+        {
+          "id": "4-16",
+          "name": "Direkte Proportionalität",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-1000000",
+          "strat": "Schluss auf die Einheit",
+          "gen": "einfacher Dreisatz mit glatten Zahlen",
+          "fehler": [],
+          "quelle": "Lehrplan 4",
+          "alt": null,
+          "arten": [
+            "kette",
+            "sach"
+          ],
+          "braucht": [
+            "3-17",
+            "4-07"
+          ]
+        },
+        {
+          "id": "4-17",
+          "name": "Wie rechnest du das?",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-1000000",
+          "strat": "Strategie wählen",
+          "gen": "große Zahlen, bei denen Zerlegen oder Runden den kürzeren Weg ergibt",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "Krauthausen",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "3-20",
+            "4-05",
+            "4-06"
+          ]
+        },
+        {
+          "id": "4-18",
+          "name": "Sachaufgaben im großen Zahlenraum",
+          "art": "sach",
+          "op": "gemischt",
+          "zr": "0-1000000",
+          "strat": "Modellieren, Durchschnitt",
+          "gen": "mehrschrittige Texte, auch mit Durchschnittswerten",
+          "fehler": [],
+          "quelle": "Alles klar! 4",
+          "alt": null,
+          "arten": [
+            "sach",
+            "fermi",
+            "lesen"
+          ],
+          "braucht": [
+            "4-05",
+            "4-06",
+            "4-07",
+            "4-09"
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 5,
+      "name": "Dezimalzahlen und die Ordnung der Rechenarten",
+      "zahlenraum": "natürliche Zahlen, Dezimalzahlen und Brüche, alle nicht negativ",
+      "leitidee": "Die 5. Schulstufe ordnet, was da ist: Vorrangregeln, Überschlag, Schranken - und führt das Rechnen mit Dezimalzahlen ein. Brüche werden dargestellt und verglichen, noch nicht berechnet.",
+      "pakete": [
+        {
+          "id": "5-01",
+          "name": "Stellenwert und Zahlenstrahl",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-1000000",
+          "strat": "Ordnen, Vergleichen",
+          "gen": "natürliche Zahlen und Dezimalzahlen gemischt einordnen",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "PLUS! 1 Kapitel A",
+          "alt": null,
+          "arten": [
+            "luecke_zahl",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "4-01"
+          ]
+        },
+        {
+          "id": "5-02",
+          "name": "Runden und Schranken",
+          "art": "strategie",
+          "op": "zahlen",
+          "zr": "0-1000000",
+          "strat": "Untere und obere Schranke angeben",
+          "gen": "zu einer Aufgabe werden Schranken und ein Schätzwert verlangt",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "PLUS! 1 Kapitel E5",
+          "alt": null,
+          "arten": [
+            "ueberschlag",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "3-09",
+            "4-10"
+          ]
+        },
+        {
+          "id": "5-03",
+          "name": "Vorrangregeln ohne Klammern",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "0-10000",
+          "strat": "Punkt vor Strich",
+          "gen": "drei bis vier Glieder, Punkt- und Strichrechnung gemischt",
+          "fehler": [
+            "vorrang"
+          ],
+          "quelle": "Lehrplan 5; PLUS! 1 E1",
+          "alt": "V-neu",
+          "arten": [
+            "ergebnis",
+            "luecke_zeichen",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "3-14",
+            "4-05"
+          ]
+        },
+        {
+          "id": "5-04",
+          "name": "Vorrangregeln mit Klammern",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "0-10000",
+          "strat": "Klammer vor Punkt vor Strich",
+          "gen": "Aufgabenpaare mit denselben Zahlen, einmal mit, einmal ohne Klammer",
+          "fehler": [
+            "vorrang"
+          ],
+          "quelle": "Lehrplan 5; PLUS! 1 E1",
+          "alt": "V-neu",
+          "arten": [
+            "ergebnis",
+            "luecke_zeichen",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "5-03"
+          ]
+        },
+        {
+          "id": "5-05",
+          "name": "Rechengesetze nutzen",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-10000",
+          "strat": "Tausch-, Verbindungs- und Verteilungsgesetz, Herausheben",
+          "gen": "Aufgaben, die sich durch Umstellen deutlich vereinfachen",
+          "fehler": [
+            "vorrang"
+          ],
+          "quelle": "PLUS! 1 E2 und E3",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "ergebnis"
+          ],
+          "braucht": [
+            "5-04",
+            "1-10"
+          ]
+        },
+        {
+          "id": "5-06",
+          "name": "Dezimalzahlen lesen und ordnen",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "Dezimalzahlen",
+          "strat": "Stellenwert nach dem Komma",
+          "gen": "zwei bis drei Nachkommastellen; ordnen, vergleichen, Nachbarzahlen",
+          "fehler": [
+            "komma",
+            "stellenwert"
+          ],
+          "quelle": "PLUS! 1 Kapitel H",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "5-01"
+          ]
+        },
+        {
+          "id": "5-07",
+          "name": "Komma verschieben",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "Dezimalzahlen",
+          "strat": "Mal und geteilt durch 10, 100, 1000",
+          "gen": "Dezimalzahl mit ein bis drei Nachkommastellen",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "PLUS! 1 I1",
+          "alt": "P4",
+          "arten": [
+            "ergebnis",
+            "folge"
+          ],
+          "braucht": [
+            "5-06",
+            "4-04"
+          ]
+        },
+        {
+          "id": "5-08",
+          "name": "Plus und Minus mit Dezimalzahlen",
+          "art": "schriftlich",
+          "op": "gemischt",
+          "zr": "Dezimalzahlen",
+          "strat": "Stellengerecht, Nullen ergänzen",
+          "gen": "unterschiedlich viele Nachkommastellen in einer Aufgabe",
+          "fehler": [
+            "komma",
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 5; PLUS! 1 I2",
+          "alt": "A12, S10",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "4-05",
+            "4-06",
+            "5-06"
+          ]
+        },
+        {
+          "id": "5-09",
+          "name": "Mal mit Dezimalzahlen",
+          "art": "schriftlich",
+          "op": "mal",
+          "zr": "Dezimalzahlen",
+          "strat": "Nachkommastellen zählen",
+          "gen": "bis drei Nachkommastellen insgesamt",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "Lehrplan 5",
+          "alt": "M18",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "4-07",
+            "5-07"
+          ]
+        },
+        {
+          "id": "5-10",
+          "name": "Geteilt mit Dezimalzahlen",
+          "art": "schriftlich",
+          "op": "geteilt",
+          "zr": "Dezimalzahlen",
+          "strat": "Zeilenweise, Komma im Ergebnis",
+          "gen": "Dividend mit Nachkommastellen, natürlicher Divisor",
+          "fehler": [
+            "komma",
+            "null_fehler"
+          ],
+          "quelle": "Lehrplan 5",
+          "alt": "D27",
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "4-09",
+            "5-07"
+          ]
+        },
+        {
+          "id": "5-11",
+          "name": "Geteilt durch eine Dezimalzahl",
+          "art": "schriftlich",
+          "op": "geteilt",
+          "zr": "Dezimalzahlen",
+          "strat": "Beide Zahlen gleichsinnig verschieben",
+          "gen": "Divisor mit ein bis zwei Nachkommastellen",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "PLUS! 1 I5",
+          "alt": null,
+          "arten": [
+            "zeilen",
+            "ueberschlag",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "5-10"
+          ]
+        },
+        {
+          "id": "5-12",
+          "name": "Runden von Dezimalzahlen",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "Dezimalzahlen",
+          "strat": "Runden auf Einer, Zehntel, Hundertstel",
+          "gen": "Rundungsstelle wechselt innerhalb des Laufs",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "Lehrplan 5",
+          "alt": "R5, R6, R7, R8",
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "3-08",
+            "5-06"
+          ]
+        },
+        {
+          "id": "5-13",
+          "name": "Arten von Brüchen",
+          "art": "zahlbegriff",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Echt, unecht, gemischte Zahl",
+          "gen": "Zähler und Nenner bis 20",
+          "fehler": [],
+          "quelle": "PLUS! 1 G3",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "ergebnis"
+          ],
+          "braucht": [
+            "4-13"
+          ]
+        },
+        {
+          "id": "5-14",
+          "name": "Erweitern und Kürzen",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Gleicher Wert, einfachste Form",
+          "gen": "Nenner bis 24; kürzbare und nicht kürzbare Brüche gemischt",
+          "fehler": [],
+          "quelle": "Lehrplan 5; PLUS! 1 G5",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "5-13",
+            "2-16"
+          ]
+        },
+        {
+          "id": "5-15",
+          "name": "Brüche ordnen und vergleichen",
+          "art": "zahlbegriff",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Gleichnamig machen zum Vergleich",
+          "gen": "zwei bis vier Brüche mit verschiedenen Nennern",
+          "fehler": [
+            "gleichnamig"
+          ],
+          "quelle": "PLUS! 1 G6",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "ergebnis"
+          ],
+          "braucht": [
+            "5-14"
+          ]
+        },
+        {
+          "id": "5-16",
+          "name": "Anteile und Bruchteile von Größen",
+          "art": "groessen",
+          "op": "bruch",
+          "zr": "Größen",
+          "strat": "Anteil berechnen",
+          "gen": "Größe ist durch den Nenner teilbar",
+          "fehler": [],
+          "quelle": "PLUS! 1 G7 und G8",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "sach"
+          ],
+          "braucht": [
+            "5-14",
+            "4-14"
+          ]
+        },
+        {
+          "id": "5-17",
+          "name": "Überschlag als Kontrolle",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "Dezimalzahlen",
+          "strat": "Kontrollieren statt nachrechnen",
+          "gen": "vorgegebenes Ergebnis prüfen, auch bewusst falsche",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "PLUS! 1 E7",
+          "alt": null,
+          "arten": [
+            "probe",
+            "ueberschlag",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "5-02",
+            "5-08"
+          ]
+        },
+        {
+          "id": "5-18",
+          "name": "Wie rechnest du das?",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "Dezimalzahlen",
+          "strat": "Geschicktes Zerlegen und Umstellen",
+          "gen": "Aufgaben, die sich durch Herausheben oder Umstellen stark verkürzen",
+          "fehler": [
+            "vorrang"
+          ],
+          "quelle": "Krauthausen",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "5-05",
+            "4-17"
+          ]
+        },
+        {
+          "id": "5-19",
+          "name": "Sachaufgaben mit Größen",
+          "art": "sach",
+          "op": "gemischt",
+          "zr": "Größen",
+          "strat": "Modellieren, Einheiten mitführen",
+          "gen": "Preise, Längen, Massen, Zeiten; mehrschrittig",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "PLUS! 1",
+          "alt": null,
+          "arten": [
+            "sach",
+            "fermi"
+          ],
+          "braucht": [
+            "5-08",
+            "5-09",
+            "4-15"
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 6,
+      "name": "Teiler, Brüche, negative Zahlen, Prozent",
+      "zahlenraum": "Teiler und Vielfache, Brüche, ganze Zahlen, Prozent",
+      "leitidee": "Die inhaltsreichste Stufe. Sie hat drei Stränge, die nebeneinander laufen: Teilbarkeit als Voraussetzung fürs Bruchrechnen, das Bruchrechnen selbst, und der erste Schritt unter null.",
+      "pakete": [
+        {
+          "id": "6-01",
+          "name": "Teiler und Teilermenge",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-200",
+          "strat": "Paarbildung beim Teilersuchen",
+          "gen": "z von 12 bis 100; gefragt wird die vollständige Teilermenge",
+          "fehler": [],
+          "quelle": "Lehrplan 6; PLUS! 2 B1",
+          "alt": null,
+          "arten": [
+            "menge",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "2-16",
+            "3-14"
+          ]
+        },
+        {
+          "id": "6-02",
+          "name": "Vielfache und Vielfachenmenge",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-200",
+          "strat": "Vielfache aufzählen",
+          "gen": "z von 2 bis 20; Vielfachenmenge bis zu einer Schranke",
+          "fehler": [],
+          "quelle": "PLUS! 2 B6",
+          "alt": null,
+          "arten": [
+            "menge",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "2-11",
+            "6-01"
+          ]
+        },
+        {
+          "id": "6-03",
+          "name": "Teilbarkeit durch 2, 5 und 10",
+          "art": "fakten",
+          "op": "zahlen",
+          "zr": "0-1000",
+          "strat": "Endziffernregel",
+          "gen": "z bis 1000; Ja-Nein-Entscheidung mit Begründung",
+          "fehler": [],
+          "quelle": "Lehrplan 6; PLUS! 2 B2",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "ergebnis"
+          ],
+          "braucht": [
+            "6-01"
+          ]
+        },
+        {
+          "id": "6-04",
+          "name": "Teilbarkeit durch 3, 4, 9 und 25",
+          "art": "fakten",
+          "op": "zahlen",
+          "zr": "0-1000",
+          "strat": "Quersumme, letzte zwei Ziffern",
+          "gen": "z bis 1000; auch Aussagen, die zu prüfen sind",
+          "fehler": [],
+          "quelle": "PLUS! 2 B3",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "ergebnis"
+          ],
+          "braucht": [
+            "6-03"
+          ]
+        },
+        {
+          "id": "6-05",
+          "name": "Primzahlen und Primfaktoren",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "0-200",
+          "strat": "Zerlegen in Primfaktoren",
+          "gen": "z von 12 bis 200",
+          "fehler": [],
+          "quelle": "Lehrplan 6; PLUS! 2 B4",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "menge"
+          ],
+          "braucht": [
+            "6-01",
+            "6-03"
+          ]
+        },
+        {
+          "id": "6-06",
+          "name": "ggT von zwei Zahlen",
+          "art": "fakten",
+          "op": "zahlen",
+          "zr": "0-200",
+          "strat": "Über Teilermengen und über Primfaktoren",
+          "gen": "zwei Zahlen bis 100",
+          "fehler": [],
+          "quelle": "Lehrplan 6",
+          "alt": "T1",
+          "arten": [
+            "ergebnis",
+            "menge"
+          ],
+          "braucht": [
+            "6-01",
+            "6-05"
+          ]
+        },
+        {
+          "id": "6-07",
+          "name": "kgV von zwei Zahlen",
+          "art": "fakten",
+          "op": "zahlen",
+          "zr": "0-200",
+          "strat": "Über Vielfachenmengen und über Primfaktoren",
+          "gen": "zwei Zahlen bis 50",
+          "fehler": [],
+          "quelle": "Lehrplan 6",
+          "alt": "T1",
+          "arten": [
+            "ergebnis",
+            "menge"
+          ],
+          "braucht": [
+            "6-02",
+            "6-05"
+          ]
+        },
+        {
+          "id": "6-08",
+          "name": "ggT und kgV von drei Zahlen",
+          "art": "fakten",
+          "op": "zahlen",
+          "zr": "0-200",
+          "strat": "Primfaktorzerlegung",
+          "gen": "drei Zahlen bis 60",
+          "fehler": [],
+          "quelle": "Lehrplan 6",
+          "alt": "T2",
+          "arten": [
+            "ergebnis",
+            "menge"
+          ],
+          "braucht": [
+            "6-06",
+            "6-07"
+          ]
+        },
+        {
+          "id": "6-09",
+          "name": "Brüche addieren, gleichnamig",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Nur die Zähler addieren",
+          "gen": "gleiche Nenner bis 12",
+          "fehler": [
+            "gleichnamig"
+          ],
+          "quelle": "Lehrplan 6; PLUS! 2 F1",
+          "alt": "A10",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "5-13"
+          ]
+        },
+        {
+          "id": "6-10",
+          "name": "Brüche addieren, ungleichnamig",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Gleichnamig machen über das kgV",
+          "gen": "Nenner mit gemeinsamem Vielfachen bis 36",
+          "fehler": [
+            "gleichnamig"
+          ],
+          "quelle": "Lehrplan 6; PLUS! 2 F2",
+          "alt": "A11",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "6-09",
+            "5-14",
+            "6-07"
+          ]
+        },
+        {
+          "id": "6-11",
+          "name": "Brüche subtrahieren, gleichnamig",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Nur die Zähler subtrahieren",
+          "gen": "gleiche Nenner bis 12",
+          "fehler": [
+            "gleichnamig"
+          ],
+          "quelle": "Lehrplan 6",
+          "alt": "S8",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "6-09"
+          ]
+        },
+        {
+          "id": "6-12",
+          "name": "Brüche subtrahieren, ungleichnamig",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Gleichnamig machen, dann subtrahieren",
+          "gen": "Nenner mit gemeinsamem Vielfachen bis 36",
+          "fehler": [
+            "gleichnamig"
+          ],
+          "quelle": "Lehrplan 6",
+          "alt": "S9",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "6-10",
+            "6-11"
+          ]
+        },
+        {
+          "id": "6-13",
+          "name": "Bruch mal natürliche Zahl",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Nur den Zähler vervielfachen",
+          "gen": "Nenner bis 12, Faktor bis 9",
+          "fehler": [],
+          "quelle": "PLUS! 2 F3",
+          "alt": "M16",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "5-13",
+            "2-15"
+          ]
+        },
+        {
+          "id": "6-14",
+          "name": "Bruch mal Bruch",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Zähler mal Zähler, vorher kürzen",
+          "gen": "Nenner bis 12; die Hälfte der Aufgaben ist vorher kürzbar",
+          "fehler": [
+            "gleichnamig"
+          ],
+          "quelle": "Lehrplan 6; PLUS! 2 F4",
+          "alt": "M17",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "6-13",
+            "5-14"
+          ]
+        },
+        {
+          "id": "6-15",
+          "name": "Bruch geteilt durch natürliche Zahl",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Nenner vervielfachen",
+          "gen": "Nenner bis 12, Divisor bis 9",
+          "fehler": [
+            "kehrwert"
+          ],
+          "quelle": "PLUS! 2 F6",
+          "alt": "D25",
+          "arten": [
+            "ergebnis",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "6-13",
+            "2-16"
+          ]
+        },
+        {
+          "id": "6-16",
+          "name": "Bruch geteilt durch Bruch",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Mit dem Kehrwert multiplizieren",
+          "gen": "Nenner bis 12, Ergebnis kürzbar",
+          "fehler": [
+            "kehrwert"
+          ],
+          "quelle": "Lehrplan 6; PLUS! 2 F6",
+          "alt": "D26",
+          "arten": [
+            "ergebnis",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "6-15",
+            "6-14"
+          ]
+        },
+        {
+          "id": "6-17",
+          "name": "Verbindung der Rechenarten mit Brüchen",
+          "art": "fakten",
+          "op": "bruch",
+          "zr": "Brüche",
+          "strat": "Vorrangregeln mit Brüchen",
+          "gen": "zwei Operationen und eine Klammer",
+          "fehler": [
+            "vorrang",
+            "kehrwert"
+          ],
+          "quelle": "PLUS! 2 F7",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "luecke_zeichen",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "6-10",
+            "6-12",
+            "6-14",
+            "6-16",
+            "5-04"
+          ]
+        },
+        {
+          "id": "6-18",
+          "name": "Negative Zahlen verstehen",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "-200 bis 200",
+          "strat": "Zahlengerade, Betrag, Gegenzahl",
+          "gen": "ordnen, vergleichen, Betrag und Gegenzahl nennen",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "Lehrplan 6; PLUS! 2 L1 und L2",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "5-01"
+          ]
+        },
+        {
+          "id": "6-19",
+          "name": "Plus und Minus mit ganzen Zahlen",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "-200 bis 200",
+          "strat": "Schritte auf der Zahlengeraden, in Worten beschrieben",
+          "gen": "Summanden zwischen -200 und 200; drei Schwierigkeitsstufen nach Zahlenraum",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "Lehrplan 6; PLUS! 2 L3",
+          "alt": "A7, A8, A9, S5, S6, S7",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "kette"
+          ],
+          "braucht": [
+            "6-18"
+          ]
+        },
+        {
+          "id": "6-20",
+          "name": "Prozent im Kopf",
+          "art": "strategie",
+          "op": "prozent",
+          "zr": "Prozent",
+          "strat": "Erst 1 Prozent oder 10 Prozent, dann vervielfachen",
+          "gen": "Grundwerte, die durch 100 oder 10 teilbar sind",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "PLUS! 2 K2",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "strategiewahl"
+          ],
+          "braucht": [
+            "5-07",
+            "5-14"
+          ]
+        },
+        {
+          "id": "6-21",
+          "name": "Prozentanteil berechnen",
+          "art": "fakten",
+          "op": "prozent",
+          "zr": "Prozent",
+          "strat": "Anteil gleich Grundwert mal Prozentsatz durch 100",
+          "gen": "Grundwert bis 5000, Prozentsatz aus gängigen Werten",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "Lehrplan 6; PLUS! 2 K3",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "sach"
+          ],
+          "braucht": [
+            "6-20"
+          ]
+        },
+        {
+          "id": "6-22",
+          "name": "Grundwert und Prozentsatz berechnen",
+          "art": "fakten",
+          "op": "prozent",
+          "zr": "Prozent",
+          "strat": "Formel umstellen",
+          "gen": "erst Grundwert, dann Prozentsatz, gemischt erst am Ende",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "PLUS! 2 K4 und K6",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "luecke_zahl",
+            "sach"
+          ],
+          "braucht": [
+            "6-21"
+          ]
+        },
+        {
+          "id": "6-23",
+          "name": "Wie rechnest du das?",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "Brüche und Prozent",
+          "strat": "Strategie wählen",
+          "gen": "Aufgaben, bei denen Kürzen vor dem Rechnen oder der 10-Prozent-Weg viel spart",
+          "fehler": [
+            "kehrwert",
+            "gleichnamig"
+          ],
+          "quelle": "Krauthausen",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "6-14",
+            "6-16",
+            "6-20"
+          ]
+        },
+        {
+          "id": "6-24",
+          "name": "Sachaufgaben mit Brüchen und Prozent",
+          "art": "sach",
+          "op": "gemischt",
+          "zr": "Brüche und Prozent",
+          "strat": "Modellieren",
+          "gen": "Rabatt, Anteile, Aufteilungen; mehrschrittig",
+          "fehler": [],
+          "quelle": "PLUS! 2",
+          "alt": null,
+          "arten": [
+            "sach"
+          ],
+          "braucht": [
+            "6-10",
+            "6-21"
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 7,
+      "name": "Rationale Zahlen, Potenzen, Terme",
+      "zahlenraum": "rationale Zahlen mit Vorzeichen",
+      "leitidee": "Jetzt wird das Rechnen allgemein: negative Zahlen auch in Mal und Geteilt, Potenzen als neue Operation, und zum ersten Mal Buchstaben statt Zahlen.",
+      "pakete": [
+        {
+          "id": "7-01",
+          "name": "Rationale Zahlen ordnen",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "rationale Zahlen",
+          "strat": "Betrag, Gegenzahl, Vergleich",
+          "gen": "Brüche, Dezimalzahlen und ganze Zahlen gemischt",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "Lehrplan 7; PLUS! 3 B",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "6-18",
+            "5-15"
+          ]
+        },
+        {
+          "id": "7-02",
+          "name": "Mal mit negativen Zahlen",
+          "art": "fakten",
+          "op": "mal",
+          "zr": "-1000 bis 1000",
+          "strat": "Vorzeichenregel",
+          "gen": "Faktoren zwischen -100 und 100, beide Vorzeichen gemischt",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "Lehrplan 7; PLUS! 3 C",
+          "alt": "M14, M15",
+          "arten": [
+            "ergebnis",
+            "luecke_zeichen",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "6-19",
+            "2-15"
+          ]
+        },
+        {
+          "id": "7-03",
+          "name": "Geteilt mit negativen Zahlen",
+          "art": "fakten",
+          "op": "geteilt",
+          "zr": "-1000 bis 1000",
+          "strat": "Vorzeichenregel",
+          "gen": "ohne Rest, Vorzeichen gemischt",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "Lehrplan 7",
+          "alt": "D24",
+          "arten": [
+            "ergebnis",
+            "luecke_zeichen",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "7-02",
+            "2-16"
+          ]
+        },
+        {
+          "id": "7-04",
+          "name": "Verbindung der Rechenarten mit Vorzeichen",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "rationale Zahlen",
+          "strat": "Vorrangregeln mit Vorzeichen",
+          "gen": "drei bis vier Glieder, mindestens ein negatives",
+          "fehler": [
+            "vorzeichen",
+            "vorrang"
+          ],
+          "quelle": "PLUS! 3 C6",
+          "alt": "A13",
+          "arten": [
+            "ergebnis",
+            "luecke_zeichen",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "7-02",
+            "7-03",
+            "5-04"
+          ]
+        },
+        {
+          "id": "7-05",
+          "name": "Potenzen verstehen",
+          "art": "zahlbegriff",
+          "op": "potenz",
+          "zr": "Potenzen",
+          "strat": "Basis und Exponent, verkürzte Malreihe",
+          "gen": "Basis bis 12, Exponent bis 4",
+          "fehler": [],
+          "quelle": "Lehrplan 7; PLUS! 3 F1",
+          "alt": "P1",
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "2-15"
+          ]
+        },
+        {
+          "id": "7-06",
+          "name": "Quadratzahlen und Kubikzahlen",
+          "art": "fakten",
+          "op": "potenz",
+          "zr": "Potenzen",
+          "strat": "Faktenabruf",
+          "gen": "1 hoch 2 bis 25 hoch 2; 1 hoch 3 bis 10 hoch 3",
+          "fehler": [],
+          "quelle": "PLUS! 3 F",
+          "alt": "P1, P2",
+          "arten": [
+            "ergebnis",
+            "luecke_zahl"
+          ],
+          "braucht": [
+            "7-05"
+          ]
+        },
+        {
+          "id": "7-07",
+          "name": "Potenzen mit negativer Basis",
+          "art": "fakten",
+          "op": "potenz",
+          "zr": "Potenzen",
+          "strat": "Gerader und ungerader Exponent",
+          "gen": "Basis von -10 bis -1, Exponent 2 bis 5",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "PLUS! 3 F3",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "7-05",
+            "7-02"
+          ]
+        },
+        {
+          "id": "7-08",
+          "name": "Potenzen von Dezimalzahlen und Brüchen",
+          "art": "fakten",
+          "op": "potenz",
+          "zr": "Potenzen",
+          "strat": "Komma und Nenner mitpotenzieren",
+          "gen": "Basis mit ein bis zwei Nachkommastellen, Exponent 2",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "PLUS! 3 F2",
+          "alt": "P3",
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "7-05",
+            "5-09"
+          ]
+        },
+        {
+          "id": "7-09",
+          "name": "Rechenregeln für Potenzen",
+          "art": "fakten",
+          "op": "potenz",
+          "zr": "Potenzen",
+          "strat": "Gleiche Basis, gleicher Exponent",
+          "gen": "Multiplikation und Division von Potenzen, Potenz einer Potenz",
+          "fehler": [
+            "vorrang"
+          ],
+          "quelle": "PLUS! 3 F5",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "7-05",
+            "7-06"
+          ]
+        },
+        {
+          "id": "7-10",
+          "name": "Zehnerpotenzen und Gleitkomma",
+          "art": "fakten",
+          "op": "potenz",
+          "zr": "Potenzen",
+          "strat": "Große und kleine Zahlen schreiben",
+          "gen": "Zahlen von 0,000 1 bis 10 Millionen",
+          "fehler": [
+            "komma",
+            "stellenwert"
+          ],
+          "quelle": "Lehrplan 7; PLUS! 3 F7",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "7-05",
+            "5-07"
+          ]
+        },
+        {
+          "id": "7-11",
+          "name": "Vorrangregeln mit Potenzen",
+          "art": "fakten",
+          "op": "gemischt",
+          "zr": "rationale Zahlen",
+          "strat": "Klammer vor Potenz vor Punkt vor Strich",
+          "gen": "vier Glieder, darunter eine Potenz und eine Klammer",
+          "fehler": [
+            "vorrang"
+          ],
+          "quelle": "PLUS! 3 F6",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "luecke_zeichen",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "7-09",
+            "5-04"
+          ]
+        },
+        {
+          "id": "7-12",
+          "name": "Terme zusammenfassen",
+          "art": "fakten",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Gleiche Glieder zusammenfassen",
+          "gen": "zwei Variablen, bis sechs Glieder",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "Lehrplan 7; PLUS! 3 G2",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "fehler_finden",
+            "probe"
+          ],
+          "braucht": [
+            "5-05",
+            "7-04"
+          ]
+        },
+        {
+          "id": "7-13",
+          "name": "Minus vor der Klammer",
+          "art": "fakten",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Alle Vorzeichen umkehren",
+          "gen": "eine Klammer mit zwei bis drei Gliedern",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "PLUS! 3 G3",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "fehler_finden",
+            "probe"
+          ],
+          "braucht": [
+            "7-12"
+          ]
+        },
+        {
+          "id": "7-14",
+          "name": "Ausmultiplizieren und Herausheben",
+          "art": "fakten",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Verteilungsgesetz in beide Richtungen",
+          "gen": "Faktor mal Klammer und die Umkehrung",
+          "fehler": [
+            "vorrang"
+          ],
+          "quelle": "PLUS! 3 G5 und G6",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "fehler_finden",
+            "probe"
+          ],
+          "braucht": [
+            "7-12",
+            "5-05"
+          ]
+        },
+        {
+          "id": "7-15",
+          "name": "Gleichungen umformen",
+          "art": "strategie",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Äquivalenzumformung",
+          "gen": "einschrittig, dann zweischrittig, ganzzahlige Lösungen",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "Lehrplan 7; PLUS! 3 D",
+          "alt": null,
+          "arten": [
+            "zeilen",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "7-12",
+            "1-11"
+          ]
+        },
+        {
+          "id": "7-16",
+          "name": "Verhältnisse und Maßstab",
+          "art": "groessen",
+          "op": "gemischt",
+          "zr": "Verhältnisse",
+          "strat": "Kürzen auf die einfachste Form",
+          "gen": "Verhältnisse mit gemeinsamem Teiler, Maßstäbe bis 1 zu 50 000",
+          "fehler": [],
+          "quelle": "PLUS! 3 H",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "sach"
+          ],
+          "braucht": [
+            "5-14",
+            "6-07"
+          ]
+        },
+        {
+          "id": "7-17",
+          "name": "Prozent: Zu- und Abnahme",
+          "art": "fakten",
+          "op": "prozent",
+          "zr": "Prozent",
+          "strat": "Änderungsfaktor",
+          "gen": "Zu- und Abnahmen zwischen 5 und 50 Prozent, auch mehrfach",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "Lehrplan 7; PLUS! 3 K",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "sach"
+          ],
+          "braucht": [
+            "6-22"
+          ]
+        },
+        {
+          "id": "7-18",
+          "name": "Zinsen rechnen",
+          "art": "fakten",
+          "op": "prozent",
+          "zr": "Prozent",
+          "strat": "Jahres-, Monats- und Tageszinsen",
+          "gen": "Kapital bis 20 000, Zinssatz bis 5 Prozent",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "PLUS! 3 K4",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "sach"
+          ],
+          "braucht": [
+            "7-17"
+          ]
+        },
+        {
+          "id": "7-19",
+          "name": "Wie rechnest du das?",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "rationale Zahlen",
+          "strat": "Strategie wählen",
+          "gen": "Terme, die sich durch Herausheben oder Umstellen stark verkürzen",
+          "fehler": [
+            "vorrang"
+          ],
+          "quelle": "Krauthausen",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "7-11",
+            "7-14"
+          ]
+        },
+        {
+          "id": "7-20",
+          "name": "Sachaufgaben Stufe 7",
+          "art": "sach",
+          "op": "gemischt",
+          "zr": "rationale Zahlen",
+          "strat": "Modellieren mit Gleichungen",
+          "gen": "Texte, aus denen eine Gleichung aufzustellen ist",
+          "fehler": [],
+          "quelle": "PLUS! 3",
+          "alt": null,
+          "arten": [
+            "sach"
+          ],
+          "braucht": [
+            "7-15",
+            "7-17"
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 8,
+      "name": "Reelle Zahlen, Bruchterme und der Kopfrechen-Kanon",
+      "zahlenraum": "reelle Zahlen",
+      "leitidee": "Die letzte Stufe schließt den Zahlbereich ab - und bringt mit dem Kapitel Lifehacks aus PLUS! 4 das zurück, worum es in dieser App von Anfang an geht: geschicktes Rechnen im Kopf.",
+      "pakete": [
+        {
+          "id": "8-01",
+          "name": "Zahlenmengen N, Z, Q, I und R",
+          "art": "zahlbegriff",
+          "op": "zahlen",
+          "zr": "reelle Zahlen",
+          "strat": "Zugehörigkeit begründen",
+          "gen": "Zahlen einordnen, Aussagen prüfen",
+          "fehler": [],
+          "quelle": "Lehrplan 8; PLUS! 4 A",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "menge"
+          ],
+          "braucht": [
+            "7-01",
+            "5-13"
+          ]
+        },
+        {
+          "id": "8-02",
+          "name": "Quadratwurzel",
+          "art": "fakten",
+          "op": "wurzel",
+          "zr": "reelle Zahlen",
+          "strat": "Umkehrung des Quadrierens",
+          "gen": "Radikanden mit ganzzahliger Wurzel bis 625, dann Näherungswerte",
+          "fehler": [],
+          "quelle": "Lehrplan 8; PLUS! 4 A",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "7-06"
+          ]
+        },
+        {
+          "id": "8-03",
+          "name": "Kubikwurzel",
+          "art": "fakten",
+          "op": "wurzel",
+          "zr": "reelle Zahlen",
+          "strat": "Umkehrung des Kubierens",
+          "gen": "Radikanden mit ganzzahliger Wurzel bis 1000",
+          "fehler": [],
+          "quelle": "PLUS! 4 A",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "wahr_falsch"
+          ],
+          "braucht": [
+            "7-05",
+            "8-02"
+          ]
+        },
+        {
+          "id": "8-04",
+          "name": "Teilweises Wurzelziehen",
+          "art": "strategie",
+          "op": "wurzel",
+          "zr": "reelle Zahlen",
+          "strat": "Quadratzahl herausziehen",
+          "gen": "Radikanden mit einem quadratischen Faktor",
+          "fehler": [],
+          "quelle": "PLUS! 4 A",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "8-02",
+            "6-05"
+          ]
+        },
+        {
+          "id": "8-05",
+          "name": "Rechenregeln für Wurzeln",
+          "art": "fakten",
+          "op": "wurzel",
+          "zr": "reelle Zahlen",
+          "strat": "Produkt und Quotient, nicht aber Summe",
+          "gen": "auch bewusst falsche Aussagen zum Prüfen",
+          "fehler": [],
+          "quelle": "PLUS! 4 A",
+          "alt": null,
+          "arten": [
+            "wahr_falsch",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "8-02",
+            "7-09"
+          ]
+        },
+        {
+          "id": "8-06",
+          "name": "Rechnen mit Näherungswerten",
+          "art": "strategie",
+          "op": "wurzel",
+          "zr": "reelle Zahlen",
+          "strat": "Runden und Fehler abschätzen",
+          "gen": "Ergebnisse auf eine geforderte Stellenzahl runden",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "Lehrplan 8",
+          "alt": null,
+          "arten": [
+            "ueberschlag",
+            "ergebnis"
+          ],
+          "braucht": [
+            "8-02",
+            "5-12"
+          ]
+        },
+        {
+          "id": "8-07",
+          "name": "Terme multiplizieren",
+          "art": "fakten",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Jedes Glied mit jedem",
+          "gen": "Binom mal Monom, dann Binom mal Binom",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "PLUS! 4 C",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "7-14"
+          ]
+        },
+        {
+          "id": "8-08",
+          "name": "Binomische Formeln",
+          "art": "fakten",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Die drei Formeln erkennen und anwenden",
+          "gen": "in beide Richtungen: anwenden und wiedererkennen",
+          "fehler": [
+            "vorzeichen"
+          ],
+          "quelle": "Lehrplan 8; PLUS! 4 C",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "8-07"
+          ]
+        },
+        {
+          "id": "8-09",
+          "name": "Bruchterme kürzen",
+          "art": "fakten",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Erst faktorisieren, dann kürzen",
+          "gen": "Zähler und Nenner mit gemeinsamem Faktor",
+          "fehler": [
+            "kehrwert"
+          ],
+          "quelle": "PLUS! 4 C",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "8-08",
+            "6-14"
+          ]
+        },
+        {
+          "id": "8-10",
+          "name": "Bruchterme addieren und subtrahieren",
+          "art": "fakten",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Gleichnamig machen",
+          "gen": "Nenner mit gemeinsamem Vielfachen",
+          "fehler": [
+            "gleichnamig"
+          ],
+          "quelle": "PLUS! 4 C",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "8-09",
+            "6-10"
+          ]
+        },
+        {
+          "id": "8-11",
+          "name": "Bruchterme multiplizieren und dividieren",
+          "art": "fakten",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Kürzen vor dem Rechnen, Kehrwert",
+          "gen": "Ergebnisse kürzbar",
+          "fehler": [
+            "kehrwert"
+          ],
+          "quelle": "PLUS! 4 C",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "8-09",
+            "6-16"
+          ]
+        },
+        {
+          "id": "8-12",
+          "name": "Doppelbrüche vereinfachen",
+          "art": "fakten",
+          "op": "term",
+          "zr": "Terme",
+          "strat": "Hauptbruchstrich zuerst",
+          "gen": "zweistöckige Brüche mit Zahlen und mit Variablen",
+          "fehler": [
+            "kehrwert"
+          ],
+          "quelle": "PLUS! 4 C; Stanetty 9.16",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "probe",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "8-11"
+          ]
+        },
+        {
+          "id": "8-13",
+          "name": "Zinseszins",
+          "art": "fakten",
+          "op": "prozent",
+          "zr": "Prozent",
+          "strat": "Änderungsfaktor hoch Laufzeit",
+          "gen": "Kapital bis 20 000, Laufzeit bis 10 Jahre",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "Lehrplan 8; PLUS! 4 L",
+          "alt": null,
+          "arten": [
+            "ergebnis",
+            "sach"
+          ],
+          "braucht": [
+            "7-18"
+          ]
+        },
+        {
+          "id": "8-14",
+          "name": "Kopfrechnen mit großen Zahlen",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-1000000",
+          "strat": "Nullen anhängen und kürzen",
+          "gen": "runde Zahlen, vier- bis sechsstellig",
+          "fehler": [
+            "stellenwert"
+          ],
+          "quelle": "PLUS! 4 M1",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "ergebnis",
+            "ueberschlag"
+          ],
+          "braucht": [
+            "4-04",
+            "3-15"
+          ]
+        },
+        {
+          "id": "8-15",
+          "name": "Glatte Zahlen",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "0-100000",
+          "strat": "Auf die glatte Zahl runden und ausgleichen",
+          "gen": "eine Zahl liegt dicht an einer glatten Zahl",
+          "fehler": [
+            "zaehlendes_rechnen"
+          ],
+          "quelle": "PLUS! 4 M2, Friendly Numbers",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "ergebnis",
+            "ueberschlag"
+          ],
+          "braucht": [
+            "3-07",
+            "8-14"
+          ]
+        },
+        {
+          "id": "8-16",
+          "name": "Der Kellner-Kniff",
+          "art": "strategie",
+          "op": "minus",
+          "zr": "0-100000",
+          "strat": "Über die Zehnerbrücke ergänzen",
+          "gen": "Subtraktionen, bei denen Ergänzen klar kürzer ist",
+          "fehler": [
+            "umkehrfehler"
+          ],
+          "quelle": "PLUS! 4 M2",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "ergebnis"
+          ],
+          "braucht": [
+            "3-07",
+            "8-15"
+          ]
+        },
+        {
+          "id": "8-17",
+          "name": "Geldbeträge überschlagen",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "Größen",
+          "strat": "Auf Euro runden, dann korrigieren",
+          "gen": "drei bis fünf Preise mit Cent-Beträgen",
+          "fehler": [
+            "komma"
+          ],
+          "quelle": "PLUS! 4 M3",
+          "alt": null,
+          "arten": [
+            "ueberschlag",
+            "strategiewahl",
+            "sach"
+          ],
+          "braucht": [
+            "5-02",
+            "8-15"
+          ]
+        },
+        {
+          "id": "8-18",
+          "name": "Größen schätzen und umrechnen",
+          "art": "groessen",
+          "op": "gemischt",
+          "zr": "Größen",
+          "strat": "Größenvorstellung",
+          "gen": "Massen, Längen, Flächen; Schätzung und Umrechnung",
+          "fehler": [
+            "stellenwert",
+            "komma"
+          ],
+          "quelle": "PLUS! 4 M4 und M5",
+          "alt": null,
+          "arten": [
+            "umwandeln",
+            "fermi"
+          ],
+          "braucht": [
+            "4-15",
+            "5-02"
+          ]
+        },
+        {
+          "id": "8-19",
+          "name": "Wie rechnest du das?",
+          "art": "strategie",
+          "op": "gemischt",
+          "zr": "reelle Zahlen",
+          "strat": "Strategie wählen",
+          "gen": "Aufgaben, bei denen ein Kniff aus 8-14 bis 8-17 den kurzen Weg ergibt",
+          "fehler": [],
+          "quelle": "PLUS! 4 M",
+          "alt": null,
+          "arten": [
+            "strategiewahl",
+            "fehler_finden"
+          ],
+          "braucht": [
+            "8-15",
+            "8-16",
+            "8-17"
+          ]
+        },
+        {
+          "id": "8-20",
+          "name": "Sachaufgaben Stufe 8",
+          "art": "sach",
+          "op": "gemischt",
+          "zr": "reelle Zahlen",
+          "strat": "Modellieren, Fermi-Aufgaben",
+          "gen": "Alltagssituationen mit Schätzung und genauer Rechnung",
+          "fehler": [],
+          "quelle": "PLUS! 4",
+          "alt": null,
+          "arten": [
+            "sach",
+            "fermi"
+          ],
+          "braucht": [
+            "8-13",
+            "8-17",
+            "8-18"
+          ]
+        }
+      ]
+    }
+  ]
+}

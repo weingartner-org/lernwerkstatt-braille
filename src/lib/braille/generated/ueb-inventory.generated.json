@@ -1,0 +1,1639 @@
+[
+  {
+    "n": 4,
+    "module": 1,
+    "title": "Alphabetic Wordsigns",
+    "units": [
+      {
+        "key": "aw-but",
+        "form": "but",
+        "print": "but",
+        "meaning": "but",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-can",
+        "form": "can",
+        "print": "can",
+        "meaning": "can",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-do",
+        "form": "do",
+        "print": "do",
+        "meaning": "do",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-every",
+        "form": "every",
+        "print": "every",
+        "meaning": "every",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-from",
+        "form": "from",
+        "print": "from",
+        "meaning": "from",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-go",
+        "form": "go",
+        "print": "go",
+        "meaning": "go",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-have",
+        "form": "have",
+        "print": "have",
+        "meaning": "have",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-just",
+        "form": "just",
+        "print": "just",
+        "meaning": "just",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-knowledge",
+        "form": "knowledge",
+        "print": "knowledge",
+        "meaning": "knowledge",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-like",
+        "form": "like",
+        "print": "like",
+        "meaning": "like",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-more",
+        "form": "more",
+        "print": "more",
+        "meaning": "more",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-not",
+        "form": "not",
+        "print": "not",
+        "meaning": "not",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-people",
+        "form": "people",
+        "print": "people",
+        "meaning": "people",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-quite",
+        "form": "quite",
+        "print": "quite",
+        "meaning": "quite",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-rather",
+        "form": "rather",
+        "print": "rather",
+        "meaning": "rather",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-so",
+        "form": "so",
+        "print": "so",
+        "meaning": "so",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-that",
+        "form": "that",
+        "print": "that",
+        "meaning": "that",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-us",
+        "form": "us",
+        "print": "us",
+        "meaning": "us",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-very",
+        "form": "very",
+        "print": "very",
+        "meaning": "very",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-will",
+        "form": "will",
+        "print": "will",
+        "meaning": "will",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-it",
+        "form": "it",
+        "print": "it",
+        "meaning": "it",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-you",
+        "form": "you",
+        "print": "you",
+        "meaning": "you",
+        "kind": "alphaWordsign",
+        "standalone": true
+      },
+      {
+        "key": "aw-as",
+        "form": "as",
+        "print": "as",
+        "meaning": "as",
+        "kind": "alphaWordsign",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 5,
+    "module": 1,
+    "title": "Strong Wordsigns: and, for, of, the, with",
+    "units": [
+      {
+        "key": "sw-and",
+        "form": "and",
+        "print": "and",
+        "meaning": "and",
+        "kind": "strongWordsign",
+        "standalone": true
+      },
+      {
+        "key": "sw-for",
+        "form": "for",
+        "print": "for",
+        "meaning": "for",
+        "kind": "strongWordsign",
+        "standalone": true
+      },
+      {
+        "key": "sw-of",
+        "form": "of",
+        "print": "of",
+        "meaning": "of",
+        "kind": "strongWordsign",
+        "standalone": true
+      },
+      {
+        "key": "sw-the",
+        "form": "the",
+        "print": "the",
+        "meaning": "the",
+        "kind": "strongWordsign",
+        "standalone": true
+      },
+      {
+        "key": "sw-with",
+        "form": "with",
+        "print": "with",
+        "meaning": "with",
+        "kind": "strongWordsign",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 6,
+    "module": 1,
+    "title": "Strong Groupsigns: and, for, of, the, with",
+    "units": [
+      {
+        "key": "sg-and",
+        "form": "and",
+        "print": "and",
+        "meaning": "Gruppenzeichen and",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-for",
+        "form": "for",
+        "print": "for",
+        "meaning": "Gruppenzeichen for",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-of",
+        "form": "of",
+        "print": "of",
+        "meaning": "Gruppenzeichen of",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-the",
+        "form": "the",
+        "print": "the",
+        "meaning": "Gruppenzeichen the",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-with",
+        "form": "with",
+        "print": "with",
+        "meaning": "Gruppenzeichen with",
+        "kind": "strongGroupsign",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "n": 7,
+    "module": 1,
+    "title": "ch, gh, sh, th, wh (+ Wordsigns child, shall, this, which)",
+    "units": [
+      {
+        "key": "sg-ch",
+        "form": "ch",
+        "print": "ch",
+        "meaning": "Gruppenzeichen ch",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-gh",
+        "form": "gh",
+        "print": "gh",
+        "meaning": "Gruppenzeichen gh",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-sh",
+        "form": "sh",
+        "print": "sh",
+        "meaning": "Gruppenzeichen sh",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-th",
+        "form": "th",
+        "print": "th",
+        "meaning": "Gruppenzeichen th",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-wh",
+        "form": "wh",
+        "print": "wh",
+        "meaning": "Gruppenzeichen wh",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "gw-child",
+        "form": "child",
+        "print": "child",
+        "meaning": "child",
+        "kind": "groupWordsign",
+        "standalone": true
+      },
+      {
+        "key": "gw-shall",
+        "form": "shall",
+        "print": "shall",
+        "meaning": "shall",
+        "kind": "groupWordsign",
+        "standalone": true
+      },
+      {
+        "key": "gw-this",
+        "form": "this",
+        "print": "this",
+        "meaning": "this",
+        "kind": "groupWordsign",
+        "standalone": true
+      },
+      {
+        "key": "gw-which",
+        "form": "which",
+        "print": "which",
+        "meaning": "which",
+        "kind": "groupWordsign",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 8,
+    "module": 1,
+    "title": "ed, er, ou, ow (+ Wordsign out)",
+    "units": [
+      {
+        "key": "sg-ed",
+        "form": "ed",
+        "print": "ed",
+        "meaning": "Gruppenzeichen ed",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-er",
+        "form": "er",
+        "print": "er",
+        "meaning": "Gruppenzeichen er",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-ou",
+        "form": "ou",
+        "print": "ou",
+        "meaning": "Gruppenzeichen ou",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-ow",
+        "form": "ow",
+        "print": "ow",
+        "meaning": "Gruppenzeichen ow",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "gw-out",
+        "form": "out",
+        "print": "out",
+        "meaning": "out",
+        "kind": "groupWordsign",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 9,
+    "module": 1,
+    "title": "st, ar, ing (+ Wordsign still)",
+    "units": [
+      {
+        "key": "sg-st",
+        "form": "st",
+        "print": "st",
+        "meaning": "Gruppenzeichen st",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-ar",
+        "form": "ar",
+        "print": "ar",
+        "meaning": "Gruppenzeichen ar",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sg-ing",
+        "form": "ing",
+        "print": "ing",
+        "meaning": "Gruppenzeichen ing",
+        "kind": "strongGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "gw-still",
+        "form": "still",
+        "print": "still",
+        "meaning": "still",
+        "kind": "groupWordsign",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 10,
+    "module": 1,
+    "title": "be, con, dis; Shortforms",
+    "units": [
+      {
+        "key": "lg-be",
+        "form": "be",
+        "print": "be",
+        "meaning": "unteres Zeichen be",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "lg-con",
+        "form": "con",
+        "print": "con",
+        "meaning": "unteres Zeichen con",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "lg-dis",
+        "form": "dis",
+        "print": "dis",
+        "meaning": "unteres Zeichen dis",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "sf-because",
+        "form": "because",
+        "print": "because",
+        "meaning": "because",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-before",
+        "form": "before",
+        "print": "before",
+        "meaning": "before",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-behind",
+        "form": "behind",
+        "print": "behind",
+        "meaning": "behind",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-below",
+        "form": "below",
+        "print": "below",
+        "meaning": "below",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-beneath",
+        "form": "beneath",
+        "print": "beneath",
+        "meaning": "beneath",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-beside",
+        "form": "beside",
+        "print": "beside",
+        "meaning": "beside",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-between",
+        "form": "between",
+        "print": "between",
+        "meaning": "between",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-beyond",
+        "form": "beyond",
+        "print": "beyond",
+        "meaning": "beyond",
+        "kind": "shortform",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 11,
+    "module": 1,
+    "title": "ea, bb, cc, ff, gg",
+    "units": [
+      {
+        "key": "lg-ea",
+        "form": "ea",
+        "print": "ea",
+        "meaning": "unteres Zeichen ea",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "lg-bb",
+        "form": "bb",
+        "print": "bb",
+        "meaning": "unteres Zeichen bb",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "lg-cc",
+        "form": "cc",
+        "print": "cc",
+        "meaning": "unteres Zeichen cc",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "lg-ff",
+        "form": "ff",
+        "print": "ff",
+        "meaning": "unteres Zeichen ff",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "lg-gg",
+        "form": "gg",
+        "print": "gg",
+        "meaning": "unteres Zeichen gg",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "n": 12,
+    "module": 1,
+    "title": "en, in; Lower Sign Rule",
+    "units": [
+      {
+        "key": "lg-en",
+        "form": "en",
+        "print": "en",
+        "meaning": "unteres Zeichen en",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "lg-in",
+        "form": "in",
+        "print": "in",
+        "meaning": "unteres Zeichen in",
+        "kind": "lowerGroupsign",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "n": 13,
+    "module": 1,
+    "title": "Lower Wordsigns: be, his, was, were, enough, in; Shortforms",
+    "units": [
+      {
+        "key": "lw-be",
+        "form": "be",
+        "print": "be",
+        "meaning": "be",
+        "kind": "lowerWordsign",
+        "standalone": true
+      },
+      {
+        "key": "lw-his",
+        "form": "his",
+        "print": "his",
+        "meaning": "his",
+        "kind": "lowerWordsign",
+        "standalone": true
+      },
+      {
+        "key": "lw-was",
+        "form": "was",
+        "print": "was",
+        "meaning": "was",
+        "kind": "lowerWordsign",
+        "standalone": true
+      },
+      {
+        "key": "lw-were",
+        "form": "were",
+        "print": "were",
+        "meaning": "were",
+        "kind": "lowerWordsign",
+        "standalone": true
+      },
+      {
+        "key": "lw-enough",
+        "form": "enough",
+        "print": "enough",
+        "meaning": "enough",
+        "kind": "lowerWordsign",
+        "standalone": true
+      },
+      {
+        "key": "lw-in",
+        "form": "in",
+        "print": "in",
+        "meaning": "in",
+        "kind": "lowerWordsign",
+        "standalone": true
+      },
+      {
+        "key": "sf-about",
+        "form": "about",
+        "print": "about",
+        "meaning": "about",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-above",
+        "form": "above",
+        "print": "above",
+        "meaning": "above",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-according",
+        "form": "according",
+        "print": "according",
+        "meaning": "according",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-across",
+        "form": "across",
+        "print": "across",
+        "meaning": "across",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-after",
+        "form": "after",
+        "print": "after",
+        "meaning": "after",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-afternoon",
+        "form": "afternoon",
+        "print": "afternoon",
+        "meaning": "afternoon",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-afterward",
+        "form": "afterward",
+        "print": "afterward",
+        "meaning": "afterward",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-afterwards",
+        "form": "afterwards",
+        "print": "afterwards",
+        "meaning": "afterwards",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-again",
+        "form": "again",
+        "print": "again",
+        "meaning": "again",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-against",
+        "form": "against",
+        "print": "against",
+        "meaning": "against",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-almost",
+        "form": "almost",
+        "print": "almost",
+        "meaning": "almost",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-already",
+        "form": "already",
+        "print": "already",
+        "meaning": "already",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-also",
+        "form": "also",
+        "print": "also",
+        "meaning": "also",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-although",
+        "form": "although",
+        "print": "although",
+        "meaning": "although",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-altogether",
+        "form": "altogether",
+        "print": "altogether",
+        "meaning": "altogether",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-always",
+        "form": "always",
+        "print": "always",
+        "meaning": "always",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-said",
+        "form": "said",
+        "print": "said",
+        "meaning": "said",
+        "kind": "shortform",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 14,
+    "module": 1,
+    "title": "Summary of Lower Signs; Shortforms",
+    "units": [
+      {
+        "key": "sf-today",
+        "form": "today",
+        "print": "today",
+        "meaning": "today",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-tomorrow",
+        "form": "tomorrow",
+        "print": "tomorrow",
+        "meaning": "tomorrow",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-tonight",
+        "form": "tonight",
+        "print": "tonight",
+        "meaning": "tonight",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-friend",
+        "form": "friend",
+        "print": "friend",
+        "meaning": "friend",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-herself",
+        "form": "herself",
+        "print": "herself",
+        "meaning": "herself",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-myself",
+        "form": "myself",
+        "print": "myself",
+        "meaning": "myself",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-him",
+        "form": "him",
+        "print": "him",
+        "meaning": "him",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-himself",
+        "form": "himself",
+        "print": "himself",
+        "meaning": "himself",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-your",
+        "form": "your",
+        "print": "your",
+        "meaning": "your",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-yourself",
+        "form": "yourself",
+        "print": "yourself",
+        "meaning": "yourself",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-could",
+        "form": "could",
+        "print": "could",
+        "meaning": "could",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-should",
+        "form": "should",
+        "print": "should",
+        "meaning": "should",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-would",
+        "form": "would",
+        "print": "would",
+        "meaning": "would",
+        "kind": "shortform",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 15,
+    "module": 2,
+    "title": "Dot 5 initial-letter contractions D–M; Shortforms",
+    "units": [
+      {
+        "key": "d5-day",
+        "form": "day",
+        "print": "day",
+        "meaning": "day",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-ever",
+        "form": "ever",
+        "print": "ever",
+        "meaning": "ever",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-father",
+        "form": "father",
+        "print": "father",
+        "meaning": "father",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-here",
+        "form": "here",
+        "print": "here",
+        "meaning": "here",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-know",
+        "form": "know",
+        "print": "know",
+        "meaning": "know",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-lord",
+        "form": "lord",
+        "print": "lord",
+        "meaning": "lord",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-mother",
+        "form": "mother",
+        "print": "mother",
+        "meaning": "mother",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "sf-conceive",
+        "form": "conceive",
+        "print": "conceive",
+        "meaning": "conceive",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-conceiving",
+        "form": "conceiving",
+        "print": "conceiving",
+        "meaning": "conceiving",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-deceive",
+        "form": "deceive",
+        "print": "deceive",
+        "meaning": "deceive",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-deceiving",
+        "form": "deceiving",
+        "print": "deceiving",
+        "meaning": "deceiving",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-declare",
+        "form": "declare",
+        "print": "declare",
+        "meaning": "declare",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-declaring",
+        "form": "declaring",
+        "print": "declaring",
+        "meaning": "declaring",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-children",
+        "form": "children",
+        "print": "children",
+        "meaning": "children",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-either",
+        "form": "either",
+        "print": "either",
+        "meaning": "either",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-good",
+        "form": "good",
+        "print": "good",
+        "meaning": "good",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-great",
+        "form": "great",
+        "print": "great",
+        "meaning": "great",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-much",
+        "form": "much",
+        "print": "much",
+        "meaning": "much",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-such",
+        "form": "such",
+        "print": "such",
+        "meaning": "such",
+        "kind": "shortform",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 16,
+    "module": 2,
+    "title": "Dot 5 initial-letter contractions N–U; Shortforms",
+    "units": [
+      {
+        "key": "d5-name",
+        "form": "name",
+        "print": "name",
+        "meaning": "name",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-one",
+        "form": "one",
+        "print": "one",
+        "meaning": "one",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-part",
+        "form": "part",
+        "print": "part",
+        "meaning": "part",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-question",
+        "form": "question",
+        "print": "question",
+        "meaning": "question",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-right",
+        "form": "right",
+        "print": "right",
+        "meaning": "right",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-some",
+        "form": "some",
+        "print": "some",
+        "meaning": "some",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-time",
+        "form": "time",
+        "print": "time",
+        "meaning": "time",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-under",
+        "form": "under",
+        "print": "under",
+        "meaning": "under",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "sf-first",
+        "form": "first",
+        "print": "first",
+        "meaning": "first",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-immediate",
+        "form": "immediate",
+        "print": "immediate",
+        "meaning": "immediate",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-its",
+        "form": "its",
+        "print": "its",
+        "meaning": "its",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-itself",
+        "form": "itself",
+        "print": "itself",
+        "meaning": "itself",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-little",
+        "form": "little",
+        "print": "little",
+        "meaning": "little",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-letter",
+        "form": "letter",
+        "print": "letter",
+        "meaning": "letter",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-must",
+        "form": "must",
+        "print": "must",
+        "meaning": "must",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-necessary",
+        "form": "necessary",
+        "print": "necessary",
+        "meaning": "necessary",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-neither",
+        "form": "neither",
+        "print": "neither",
+        "meaning": "neither",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-oneself",
+        "form": "oneself",
+        "print": "oneself",
+        "meaning": "oneself",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-ourselves",
+        "form": "ourselves",
+        "print": "ourselves",
+        "meaning": "ourselves",
+        "kind": "shortform",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 17,
+    "module": 2,
+    "title": "Dot 5 initial-letter contractions (rest); Shortforms",
+    "units": [
+      {
+        "key": "d5-work",
+        "form": "work",
+        "print": "work",
+        "meaning": "work",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-young",
+        "form": "young",
+        "print": "young",
+        "meaning": "young",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-there",
+        "form": "there",
+        "print": "there",
+        "meaning": "there",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-character",
+        "form": "character",
+        "print": "character",
+        "meaning": "character",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-through",
+        "form": "through",
+        "print": "through",
+        "meaning": "through",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-where",
+        "form": "where",
+        "print": "where",
+        "meaning": "where",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "d5-ought",
+        "form": "ought",
+        "print": "ought",
+        "meaning": "ought",
+        "kind": "initialDot5",
+        "standalone": true
+      },
+      {
+        "key": "sf-blind",
+        "form": "blind",
+        "print": "blind",
+        "meaning": "blind",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-braille",
+        "form": "braille",
+        "print": "braille",
+        "meaning": "braille",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-paid",
+        "form": "paid",
+        "print": "paid",
+        "meaning": "paid",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-perhaps",
+        "form": "perhaps",
+        "print": "perhaps",
+        "meaning": "perhaps",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-perceive",
+        "form": "perceive",
+        "print": "perceive",
+        "meaning": "perceive",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-perceiving",
+        "form": "perceiving",
+        "print": "perceiving",
+        "meaning": "perceiving",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-receive",
+        "form": "receive",
+        "print": "receive",
+        "meaning": "receive",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-receiving",
+        "form": "receiving",
+        "print": "receiving",
+        "meaning": "receiving",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-rejoice",
+        "form": "rejoice",
+        "print": "rejoice",
+        "meaning": "rejoice",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-rejoicing",
+        "form": "rejoicing",
+        "print": "rejoicing",
+        "meaning": "rejoicing",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-quick",
+        "form": "quick",
+        "print": "quick",
+        "meaning": "quick",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-themselves",
+        "form": "themselves",
+        "print": "themselves",
+        "meaning": "themselves",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-thyself",
+        "form": "thyself",
+        "print": "thyself",
+        "meaning": "thyself",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-together",
+        "form": "together",
+        "print": "together",
+        "meaning": "together",
+        "kind": "shortform",
+        "standalone": true
+      },
+      {
+        "key": "sf-yourselves",
+        "form": "yourselves",
+        "print": "yourselves",
+        "meaning": "yourselves",
+        "kind": "shortform",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 18,
+    "module": 2,
+    "title": "Dots 4-5: upon, word, these, those, whose",
+    "units": [
+      {
+        "key": "d45-upon",
+        "form": "upon",
+        "print": "upon",
+        "meaning": "upon",
+        "kind": "initialDot45",
+        "standalone": true
+      },
+      {
+        "key": "d45-word",
+        "form": "word",
+        "print": "word",
+        "meaning": "word",
+        "kind": "initialDot45",
+        "standalone": true
+      },
+      {
+        "key": "d45-these",
+        "form": "these",
+        "print": "these",
+        "meaning": "these",
+        "kind": "initialDot45",
+        "standalone": true
+      },
+      {
+        "key": "d45-those",
+        "form": "those",
+        "print": "those",
+        "meaning": "those",
+        "kind": "initialDot45",
+        "standalone": true
+      },
+      {
+        "key": "d45-whose",
+        "form": "whose",
+        "print": "whose",
+        "meaning": "whose",
+        "kind": "initialDot45",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 19,
+    "module": 2,
+    "title": "Dots 4-5-6: cannot, had, many, spirit, world, their",
+    "units": [
+      {
+        "key": "d456-cannot",
+        "form": "cannot",
+        "print": "cannot",
+        "meaning": "cannot",
+        "kind": "initialDot456",
+        "standalone": true
+      },
+      {
+        "key": "d456-had",
+        "form": "had",
+        "print": "had",
+        "meaning": "had",
+        "kind": "initialDot456",
+        "standalone": true
+      },
+      {
+        "key": "d456-many",
+        "form": "many",
+        "print": "many",
+        "meaning": "many",
+        "kind": "initialDot456",
+        "standalone": true
+      },
+      {
+        "key": "d456-spirit",
+        "form": "spirit",
+        "print": "spirit",
+        "meaning": "spirit",
+        "kind": "initialDot456",
+        "standalone": true
+      },
+      {
+        "key": "d456-world",
+        "form": "world",
+        "print": "world",
+        "meaning": "world",
+        "kind": "initialDot456",
+        "standalone": true
+      },
+      {
+        "key": "d456-their",
+        "form": "their",
+        "print": "their",
+        "meaning": "their",
+        "kind": "initialDot456",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "n": 20,
+    "module": 2,
+    "title": "Final-letter groupsigns: ance, ence, sion, tion, less, ness",
+    "units": [
+      {
+        "key": "fg-ance",
+        "form": "ance",
+        "print": "ance",
+        "meaning": "Schlusszeichen ance",
+        "kind": "finalGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "fg-ence",
+        "form": "ence",
+        "print": "ence",
+        "meaning": "Schlusszeichen ence",
+        "kind": "finalGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "fg-sion",
+        "form": "sion",
+        "print": "sion",
+        "meaning": "Schlusszeichen sion",
+        "kind": "finalGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "fg-tion",
+        "form": "tion",
+        "print": "tion",
+        "meaning": "Schlusszeichen tion",
+        "kind": "finalGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "fg-less",
+        "form": "less",
+        "print": "less",
+        "meaning": "Schlusszeichen less",
+        "kind": "finalGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "fg-ness",
+        "form": "ness",
+        "print": "ness",
+        "meaning": "Schlusszeichen ness",
+        "kind": "finalGroupsign",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "n": 21,
+    "module": 2,
+    "title": "Final-letter groupsigns: ound, ong, ount, ment",
+    "units": [
+      {
+        "key": "fg-ound",
+        "form": "ound",
+        "print": "ound",
+        "meaning": "Schlusszeichen ound",
+        "kind": "finalGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "fg-ong",
+        "form": "ong",
+        "print": "ong",
+        "meaning": "Schlusszeichen ong",
+        "kind": "finalGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "fg-ount",
+        "form": "ount",
+        "print": "ount",
+        "meaning": "Schlusszeichen ount",
+        "kind": "finalGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "fg-ment",
+        "form": "ment",
+        "print": "ment",
+        "meaning": "Schlusszeichen ment",
+        "kind": "finalGroupsign",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "n": 22,
+    "module": 2,
+    "title": "Final-letter groupsigns: ful, ity",
+    "units": [
+      {
+        "key": "fg-ful",
+        "form": "ful",
+        "print": "ful",
+        "meaning": "Schlusszeichen ful",
+        "kind": "finalGroupsign",
+        "standalone": false
+      },
+      {
+        "key": "fg-ity",
+        "form": "ity",
+        "print": "ity",
+        "meaning": "Schlusszeichen ity",
+        "kind": "finalGroupsign",
+        "standalone": false
+      }
+    ]
+  }
+]

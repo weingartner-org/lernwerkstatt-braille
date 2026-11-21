@@ -1,0 +1,16 @@
+{
+  "name": "Klangpunkte - Braille-Noten und Musik",
+  "short_name": "Klangpunkte",
+  "description": "Die Braille-Notenschrift mit echten Tönen lernen, von Sensorik",
+  "start_url": "/programme/klangpunkte",
+  "scope": "/programme/klangpunkte",
+  "display": "standalone",
+  "background_color": "#FBFBFD",
+  "theme_color": "#FBFBFD",
+  "lang": "de",
+  "icons": [
+    { "src": "/klangpunkte-logo-180.png?v=2", "sizes": "180x180", "type": "image/png" },
+    { "src": "/klangpunkte-logo-512.png?v=2", "sizes": "512x512", "type": "image/png" },
+    { "src": "/klangpunkte-logo.svg?v=2", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,58 @@
+/**
+ * Bereich `abzeichen` - Portugiesisch (br, Brasilien): Grupos, nomes e descrições dos distintivos
+ * (Schlüssel = Abzeichen-Id in `badges.ts`). Beschreibungen mit Zahl: Funktionen.
+ */
+import type { abzeichen as De } from "../de/abzeichen";
+
+export const abzeichen: typeof De = {
+  gruppen: {
+    sterne: "Estrelas",
+    bestnote: "Nota máxima",
+    klangwelten: "Mundos sonoros",
+    diktat: "Ditado",
+    baumeister: "Construtor",
+    lese: "Concerto de leitura",
+    lieder: "Palco das canções",
+    geheim: "Segredo",
+  },
+  namen: {
+    "stern-1": "Estrela cadente",
+    "stern-2": "Colecionador de estrelas",
+    "stern-3": "Pegador de estrelas",
+    "stern-4": "Céu estrelado",
+    "drei-1": "Primeiro acerto em cheio",
+    "drei-2": "Colecionador de notas máximas",
+    "drei-3": "Músico brilhante",
+    "welt-1": "Explorador de mundos",
+    "welt-2": "Viajante de mundos",
+    "welt-3": "Vencedor de mundos",
+    "welt-4": "Mestre de todos os mundos",
+    "diktat-1": "Detetive de ditados",
+    "diktat-2": "Mestre do ditado",
+    "takt-1": "Pedreiro de compassos",
+    "takt-2": "Arquiteto de compassos",
+    "lese-1": "Leitor de folhas",
+    "lese-2": "Leitor de concertos",
+    "lied-1": "Estreia no palco",
+    "lied-2": "Amante de canções",
+    "lied-3": "Estrela do palco",
+    "erstes-werk": "Pequeno compositor",
+    "voller-schrank": "Armário de obras cheio",
+    "alles-gemeistert": "Rei do som",
+  },
+  sterneGesammelt: (n: number) => `${n} estrelas juntadas.`,
+  ersterVolltreffer: "O primeiro capítulo dominado com 3 estrelas.",
+  volltreffer: (n: number) => `${n} capítulos dominados com 3 estrelas.`,
+  welt1: "Um mundo sonoro inteiro dominado.",
+  welt2: "Três mundos sonoros dominados.",
+  welt3: "Seis mundos sonoros dominados.",
+  welt4: "Todos os nove mundos sonoros dominados.",
+  diktate: (n: number) => `${n} ditados escritos sem erros.`,
+  takte: (n: number) => `${n} compassos completos construídos.`,
+  zeilen: (n: number) => `${n} linhas tocadas sem erros de memória.`,
+  lied1: "A primeira canção tocada do início ao fim.",
+  lieder: (n: number) => `${n} canções diferentes tocadas do início ao fim.`,
+  erstesWerk: "A primeira obra própria guardada.",
+  vollerSchrank: "Cinco obras próprias na estante - o armário está cheio.",
+  alleKapitel: "Todos os capítulos do Klangpunkte dominados.",
+};

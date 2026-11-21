@@ -1,0 +1,1452 @@
+{
+ "_hinweis": "ERZEUGT - nicht von Hand ändern. Quelle: liblouis de-g1 (Deutsche Vollschrift). Erzeugen: npm run voll:ausnahmen · Prüfen: tests/braille-voll-gegen-liblouis.test.ts. Wert = Positionen im kleingeschriebenen Wort, an denen NICHT gekürzt werden darf.",
+ "_geprueft": 37997,
+ "_appWoerter": 1235,
+ "ausnahmen": {
+  "adieu": [
+   2
+  ],
+  "alien": [
+   2
+  ],
+  "aliens": [
+   2
+  ],
+  "alufolie": [
+   6
+  ],
+  "anfasst": [
+   5
+  ],
+  "anfasste": [
+   5
+  ],
+  "anfassten": [
+   5
+  ],
+  "angefasst": [
+   7
+  ],
+  "angepasst": [
+   7
+  ],
+  "angeschrien": [
+   8
+  ],
+  "aquarien": [
+   5
+  ],
+  "arabien": [
+   4
+  ],
+  "arbeitstag": [
+   6
+  ],
+  "arbeitstiere": [
+   6
+  ],
+  "arbeitstisch": [
+   6
+  ],
+  "atelier": [
+   4
+  ],
+  "auffrisst": [
+   7
+  ],
+  "aufgepasst": [
+   8
+  ],
+  "aufgeschrien": [
+   9
+  ],
+  "aufpasst": [
+   6
+  ],
+  "aufpasste": [
+   6
+  ],
+  "aufpassten": [
+   6
+  ],
+  "austausch": [
+   2
+  ],
+  "austauschen": [
+   2
+  ],
+  "austauschte": [
+   2
+  ],
+  "austauschten": [
+   2
+  ],
+  "austeilen": [
+   2
+  ],
+  "austoben": [
+   2
+  ],
+  "austragen": [
+   2
+  ],
+  "austreiben": [
+   2
+  ],
+  "austreten": [
+   2
+  ],
+  "austricksen": [
+   2
+  ],
+  "austrocknen": [
+   2
+  ],
+  "außenlinie": [
+   8
+  ],
+  "bakterien": [
+   6
+  ],
+  "barriere": [
+   4
+  ],
+  "batterien": [
+   6
+  ],
+  "beeinflusst": [
+   9
+  ],
+  "befasst": [
+   5
+  ],
+  "behandlungstisch": [
+   10
+  ],
+  "beinhalten": [
+   1
+  ],
+  "beinhaltete": [
+   1
+  ],
+  "beirren": [
+   1
+  ],
+  "bestie": [
+   4
+  ],
+  "bestien": [
+   4
+  ],
+  "beunruhigen": [
+   1
+  ],
+  "beunruhigend": [
+   1
+  ],
+  "beunruhigende": [
+   1
+  ],
+  "beunruhigenden": [
+   1
+  ],
+  "beunruhigender": [
+   1
+  ],
+  "beunruhigt": [
+   1
+  ],
+  "beunruhigte": [
+   1
+  ],
+  "beunruhigten": [
+   1
+  ],
+  "beurteilen": [
+   1
+  ],
+  "beurteilung": [
+   1
+  ],
+  "bewusst": [
+   5
+  ],
+  "bewusste": [
+   5
+  ],
+  "bewusstlos": [
+   5
+  ],
+  "bewusstlose": [
+   5
+  ],
+  "bewusstlosen": [
+   5
+  ],
+  "bewusstsein": [
+   5
+  ],
+  "bewusstseins": [
+   5
+  ],
+  "bisschen": [
+   3
+  ],
+  "blutstropfen": [
+   4
+  ],
+  "bläschen": [
+   3
+  ],
+  "bullterrier": [
+   8
+  ],
+  "bushäuschen": [
+   6
+  ],
+  "bustür": [
+   2
+  ],
+  "chemikalien": [
+   8
+  ],
+  "chipstüte": [
+   4
+  ],
+  "chipstüten": [
+   4
+  ],
+  "comicheft": [
+   4
+  ],
+  "comichefte": [
+   4
+  ],
+  "detektivkarriere": [
+   12
+  ],
+  "diego": [
+   1
+  ],
+  "dienstag": [
+   4
+  ],
+  "dienstagmorgen": [
+   4
+  ],
+  "dienstags": [
+   4
+  ],
+  "dinosaurier": [
+   8
+  ],
+  "dinosauriern": [
+   8
+  ],
+  "dinosauriers": [
+   8
+  ],
+  "donnerstag": [
+   6
+  ],
+  "donnerstagabend": [
+   6
+  ],
+  "donnerstagmorgen": [
+   6
+  ],
+  "donnerstagnachmittag": [
+   6
+  ],
+  "donnerstags": [
+   6
+  ],
+  "dornröschen": [
+   6
+  ],
+  "dornröschenschlaf": [
+   6
+  ],
+  "durchnässt": [
+   8
+  ],
+  "durchnässte": [
+   8
+  ],
+  "durchnässten": [
+   8
+  ],
+  "durchnässtes": [
+   8
+  ],
+  "döschen": [
+   2
+  ],
+  "effizient": [
+   5
+  ],
+  "eingangstor": [
+   7
+  ],
+  "eingangstür": [
+   7
+  ],
+  "eingefasst": [
+   8
+  ],
+  "einkaufstasche": [
+   7
+  ],
+  "einkaufstaschen": [
+   7
+  ],
+  "einkaufstour": [
+   7
+  ],
+  "einkaufstüten": [
+   7
+  ],
+  "einlässt": [
+   6
+  ],
+  "empfangstresen": [
+   7
+  ],
+  "energien": [
+   5
+  ],
+  "erfasst": [
+   5
+  ],
+  "erfasste": [
+   5
+  ],
+  "erfassten": [
+   5
+  ],
+  "erkundungstour": [
+   9
+  ],
+  "erpresst": [
+   6
+  ],
+  "esst": [
+   2
+  ],
+  "esstisch": [
+   2
+  ],
+  "exklusivinterview": [
+   14
+  ],
+  "familie": [
+   5
+  ],
+  "familien": [
+   5
+  ],
+  "familiengeschichte": [
+   5
+  ],
+  "familienmitglied": [
+   5
+  ],
+  "familienmitglieder": [
+   5
+  ],
+  "familiennamen": [
+   5
+  ],
+  "familienoberhaupt": [
+   5
+  ],
+  "familientradition": [
+   5
+  ],
+  "familientreffen": [
+   5
+  ],
+  "familienwappen": [
+   5
+  ],
+  "fasst": [
+   3
+  ],
+  "fasste": [
+   3
+  ],
+  "fassten": [
+   3
+  ],
+  "ferien": [
+   3
+  ],
+  "ferienbeginn": [
+   3
+  ],
+  "feriengäste": [
+   3
+  ],
+  "ferienhaus": [
+   3
+  ],
+  "ferienlager": [
+   3
+  ],
+  "ferienreise": [
+   3
+  ],
+  "ferientag": [
+   3
+  ],
+  "ferientage": [
+   3
+  ],
+  "ferienwoche": [
+   3
+  ],
+  "fernsehserie": [
+   10
+  ],
+  "fernsehserien": [
+   10
+  ],
+  "finanziell": [
+   6
+  ],
+  "finanziellen": [
+   6
+  ],
+  "fluglinie": [
+   7
+  ],
+  "flugsaurier": [
+   8
+  ],
+  "folie": [
+   3
+  ],
+  "folien": [
+   3
+  ],
+  "fossilien": [
+   6
+  ],
+  "fotografien": [
+   8
+  ],
+  "frisst": [
+   4
+  ],
+  "frühlingstag": [
+   8
+  ],
+  "frühstückstablett": [
+   9
+  ],
+  "frühstückstisch": [
+   9
+  ],
+  "fuchsteufelswild": [
+   4
+  ],
+  "furie": [
+   3
+  ],
+  "fässchen": [
+   3
+  ],
+  "führerhäuschen": [
+   9
+  ],
+  "galaxien": [
+   5
+  ],
+  "gartenhäuschen": [
+   9
+  ],
+  "geburtstag": [
+   6
+  ],
+  "geburtstage": [
+   6
+  ],
+  "geburtstagsessen": [
+   6
+  ],
+  "geburtstagsfeier": [
+   6
+  ],
+  "geburtstagsfest": [
+   6
+  ],
+  "geburtstagsgeschenk": [
+   6
+  ],
+  "geburtstagsgeschenke": [
+   6
+  ],
+  "geburtstagsgäste": [
+   6
+  ],
+  "geburtstagskarte": [
+   6
+  ],
+  "geburtstagskarten": [
+   6
+  ],
+  "geburtstagskind": [
+   6
+  ],
+  "geburtstagskuchen": [
+   6
+  ],
+  "geburtstagslied": [
+   6
+  ],
+  "geburtstagsparty": [
+   6
+  ],
+  "geburtstagstisch": [
+   6,
+   10
+  ],
+  "geburtstagstorte": [
+   6,
+   10
+  ],
+  "gefasst": [
+   5
+  ],
+  "gefühlschaos": [
+   6
+  ],
+  "gehasst": [
+   5
+  ],
+  "geheimnistuerei": [
+   8
+  ],
+  "geheimnistuerisch": [
+   8
+  ],
+  "geimpft": [
+   1
+  ],
+  "geirrt": [
+   1
+  ],
+  "geküsst": [
+   5
+  ],
+  "gepasst": [
+   5
+  ],
+  "gepresst": [
+   6
+  ],
+  "gepresstem": [
+   6
+  ],
+  "gepressten": [
+   6
+  ],
+  "gepresster": [
+   6
+  ],
+  "geranien": [
+   5
+  ],
+  "geschrien": [
+   6
+  ],
+  "geschäftstüchtig": [
+   8
+  ],
+  "gesprächsthema": [
+   8
+  ],
+  "gestresst": [
+   7
+  ],
+  "gewusst": [
+   5
+  ],
+  "glastisch": [
+   3
+  ],
+  "glastür": [
+   3
+  ],
+  "glastüren": [
+   3
+  ],
+  "gläschen": [
+   3
+  ],
+  "glückstag": [
+   5
+  ],
+  "großfamilie": [
+   9
+  ],
+  "gässchen": [
+   3
+  ],
+  "gürtellinie": [
+   9
+  ],
+  "haie": [
+   2
+  ],
+  "haien": [
+   2
+  ],
+  "halstuch": [
+   3
+  ],
+  "hasst": [
+   3
+  ],
+  "hasste": [
+   3
+  ],
+  "hassten": [
+   3
+  ],
+  "haustier": [
+   3
+  ],
+  "haustiere": [
+   3
+  ],
+  "haustieren": [
+   3
+  ],
+  "haustische": [
+   3
+  ],
+  "haustor": [
+   3
+  ],
+  "haustür": [
+   3
+  ],
+  "haustüren": [
+   3
+  ],
+  "haustürschlüssel": [
+   3
+  ],
+  "herausgepresst": [
+   12
+  ],
+  "heraustrat": [
+   5
+  ],
+  "herbstferien": [
+   9
+  ],
+  "hinaustragen": [
+   5
+  ],
+  "hinaustrat": [
+   5
+  ],
+  "hinaustraten": [
+   5
+  ],
+  "hindurchpasste": [
+   11
+  ],
+  "hineingepasst": [
+   11
+  ],
+  "hineinpasst": [
+   9
+  ],
+  "hineinpasste": [
+   9
+  ],
+  "hineinpassten": [
+   9
+  ],
+  "hinterlässt": [
+   9
+  ],
+  "hochzeitstag": [
+   8
+  ],
+  "holzhäuschen": [
+   7
+  ],
+  "häschen": [
+   2
+  ],
+  "häuschen": [
+   3
+  ],
+  "häuschens": [
+   3
+  ],
+  "höschen": [
+   2
+  ],
+  "indizien": [
+   5
+  ],
+  "informationstafel": [
+   11
+  ],
+  "ingenieur": [
+   5
+  ],
+  "intelligenzquotienten": [
+   15
+  ],
+  "interview": [
+   6
+  ],
+  "interviewen": [
+   6
+  ],
+  "interviews": [
+   6
+  ],
+  "interviewt": [
+   6
+  ],
+  "isst": [
+   2
+  ],
+  "italiener": [
+   4
+  ],
+  "italienerin": [
+   4
+  ],
+  "italienisch": [
+   4
+  ],
+  "italienische": [
+   4
+  ],
+  "italienischen": [
+   4
+  ],
+  "italienischer": [
+   4
+  ],
+  "italienisches": [
+   4
+  ],
+  "jalousien": [
+   6
+  ],
+  "jeanstasche": [
+   4
+  ],
+  "jubiläum": [
+   5
+  ],
+  "kalorien": [
+   5
+  ],
+  "kanarienvogel": [
+   5
+  ],
+  "kanarienvögel": [
+   5
+  ],
+  "karriere": [
+   4
+  ],
+  "kassenhäuschen": [
+   9
+  ],
+  "kastanie": [
+   6
+  ],
+  "kastanien": [
+   6
+  ],
+  "kastanienbaum": [
+   6
+  ],
+  "kastanienbraun": [
+   6
+  ],
+  "kastanienbraune": [
+   6
+  ],
+  "kastanienbraunen": [
+   6
+  ],
+  "kastanienbraunes": [
+   6
+  ],
+  "kindergeburtstag": [
+   12
+  ],
+  "knien": [
+   2
+  ],
+  "kniend": [
+   2
+  ],
+  "kopien": [
+   3
+  ],
+  "kriegstanz": [
+   5
+  ],
+  "krimiserie": [
+   8
+  ],
+  "königstochter": [
+   5
+  ],
+  "küsschen": [
+   3
+  ],
+  "küsst": [
+   3
+  ],
+  "küsste": [
+   3
+  ],
+  "küssten": [
+   3
+  ],
+  "lakaien": [
+   4
+  ],
+  "lasst": [
+   3
+  ],
+  "liebestrank": [
+   5
+  ],
+  "lieblingsserie": [
+   12
+  ],
+  "lieblingsthema": [
+   8
+  ],
+  "lieblingstier": [
+   8
+  ],
+  "lieblingstiere": [
+   8
+  ],
+  "lieblingstochter": [
+   8
+  ],
+  "lilien": [
+   3
+  ],
+  "linie": [
+   3
+  ],
+  "linien": [
+   3
+  ],
+  "linoleumboden": [
+   5
+  ],
+  "loslässt": [
+   6
+  ],
+  "luftbläschen": [
+   7
+  ],
+  "lässt": [
+   3
+  ],
+  "magier": [
+   3
+  ],
+  "magiern": [
+   3
+  ],
+  "magiers": [
+   3
+  ],
+  "maier": [
+   2
+  ],
+  "marienkäfer": [
+   3
+  ],
+  "materialien": [
+   8
+  ],
+  "materie": [
+   5
+  ],
+  "matheunterricht": [
+   4
+  ],
+  "medien": [
+   3
+  ],
+  "meerestier": [
+   5
+  ],
+  "meerestiere": [
+   5
+  ],
+  "mehrfamilienhaus": [
+   9
+  ],
+  "melodien": [
+   5
+  ],
+  "mineralien": [
+   7
+  ],
+  "misst": [
+   3
+  ],
+  "misstrauen": [
+   3
+  ],
+  "misstrauisch": [
+   3
+  ],
+  "misstrauische": [
+   3
+  ],
+  "misstrauischem": [
+   3
+  ],
+  "misstrauischen": [
+   3
+  ],
+  "misstrauischer": [
+   3
+  ],
+  "mittagstisch": [
+   6
+  ],
+  "mittellinie": [
+   9
+  ],
+  "modelkarriere": [
+   9
+  ],
+  "monsieur": [
+   4
+  ],
+  "mucksmäuschenstill": [
+   8
+  ],
+  "muggelfamilie": [
+   11
+  ],
+  "mumie": [
+   3
+  ],
+  "mumien": [
+   3
+  ],
+  "museum": [
+   3
+  ],
+  "museums": [
+   3
+  ],
+  "musst": [
+   3
+  ],
+  "musste": [
+   3
+  ],
+  "mussten": [
+   3
+  ],
+  "musstest": [
+   3
+  ],
+  "musstet": [
+   3
+  ],
+  "mäuschen": [
+   3
+  ],
+  "mäuschenstill": [
+   3
+  ],
+  "müsst": [
+   3
+  ],
+  "müsste": [
+   3
+  ],
+  "müssten": [
+   3
+  ],
+  "müsstest": [
+   3
+  ],
+  "müsstet": [
+   3
+  ],
+  "nachlässt": [
+   7
+  ],
+  "naturkundemuseum": [
+   13
+  ],
+  "nichtstun": [
+   5
+  ],
+  "nikolaustag": [
+   7
+  ],
+  "näschen": [
+   2
+  ],
+  "offiziell": [
+   5
+  ],
+  "offizielle": [
+   5
+  ],
+  "offiziellen": [
+   5
+  ],
+  "orient": [
+   2
+  ],
+  "orientalischen": [
+   2
+  ],
+  "orientieren": [
+   2
+  ],
+  "orientiert": [
+   2
+  ],
+  "orientierte": [
+   2
+  ],
+  "orientierung": [
+   2
+  ],
+  "orientierungslos": [
+   2
+  ],
+  "orientierungssinn": [
+   2
+  ],
+  "osterferien": [
+   8
+  ],
+  "papierserviette": [
+   10
+  ],
+  "passt": [
+   3
+  ],
+  "passte": [
+   3
+  ],
+  "passten": [
+   3
+  ],
+  "patient": [
+   3
+  ],
+  "patienten": [
+   3
+  ],
+  "patientin": [
+   3
+  ],
+  "personalien": [
+   8
+  ],
+  "petersilie": [
+   8
+  ],
+  "petroleumlampe": [
+   6
+  ],
+  "plastikfolie": [
+   10
+  ],
+  "portemonnaie": [
+   10
+  ],
+  "portier": [
+   4
+  ],
+  "potenzielle": [
+   6
+  ],
+  "premiere": [
+   4
+  ],
+  "premierminister": [
+   4
+  ],
+  "presst": [
+   4
+  ],
+  "presste": [
+   4
+  ],
+  "pressten": [
+   4
+  ],
+  "prinzesschen": [
+   7
+  ],
+  "radieschen": [
+   5
+  ],
+  "raubsaurier": [
+   8
+  ],
+  "rauslässt": [
+   7
+  ],
+  "reinlässt": [
+   7
+  ],
+  "reiseumhang": [
+   4
+  ],
+  "reptilien": [
+   6
+  ],
+  "samstag": [
+   3
+  ],
+  "samstagabend": [
+   3
+  ],
+  "samstagmorgen": [
+   3
+  ],
+  "samstagnachmittag": [
+   3
+  ],
+  "samstagnacht": [
+   3
+  ],
+  "samstags": [
+   3
+  ],
+  "samstagvormittag": [
+   3
+  ],
+  "saurier": [
+   4
+  ],
+  "sauriern": [
+   4
+  ],
+  "schlafhäuschen": [
+   9
+  ],
+  "schlangenlinien": [
+   12
+  ],
+  "schlosstor": [
+   6
+  ],
+  "schrien": [
+   4
+  ],
+  "schuldbewusst": [
+   11
+  ],
+  "schuldbewussten": [
+   11
+  ],
+  "schuldbewusstes": [
+   11
+  ],
+  "schuldbewusstsein": [
+   11
+  ],
+  "schulferien": [
+   8
+  ],
+  "schusslinie": [
+   9
+  ],
+  "seeufer": [
+   2
+  ],
+  "seeungeheuer": [
+   2
+  ],
+  "seeungeheuern": [
+   2
+  ],
+  "seitenlinie": [
+   9
+  ],
+  "selbstbewusst": [
+   11
+  ],
+  "selbstbewusstsein": [
+   11
+  ],
+  "serie": [
+   3
+  ],
+  "serviette": [
+   4
+  ],
+  "servietten": [
+   4
+  ],
+  "sinnestäuschung": [
+   5
+  ],
+  "skier": [
+   2
+  ],
+  "skiern": [
+   2
+  ],
+  "sommerferien": [
+   9
+  ],
+  "spaniel": [
+   4
+  ],
+  "spanier": [
+   4
+  ],
+  "speziell": [
+   4
+  ],
+  "spezielle": [
+   4
+  ],
+  "speziellen": [
+   4
+  ],
+  "spezieller": [
+   4
+  ],
+  "spezielles": [
+   4
+  ],
+  "startlinie": [
+   8
+  ],
+  "strategien": [
+   7
+  ],
+  "studie": [
+   4
+  ],
+  "studien": [
+   4
+  ],
+  "terrier": [
+   4
+  ],
+  "theorien": [
+   5
+  ],
+  "torlinie": [
+   6
+  ],
+  "tragödie": [
+   6
+  ],
+  "tässchen": [
+   3
+  ],
+  "umfasst": [
+   5
+  ],
+  "umfasste": [
+   5
+  ],
+  "umfassten": [
+   5
+  ],
+  "unbeirrt": [
+   3
+  ],
+  "unbewusst": [
+   7
+  ],
+  "unterbewusstsein": [
+   10
+  ],
+  "untersuchungstisch": [
+   12
+  ],
+  "utensilien": [
+   7
+  ],
+  "valentinstag": [
+   8
+  ],
+  "vegetarier": [
+   7
+  ],
+  "veranlasst": [
+   8
+  ],
+  "veranlasste": [
+   8
+  ],
+  "verantwortungsbewusst": [
+   19
+  ],
+  "verblasst": [
+   7
+  ],
+  "verblasste": [
+   7
+  ],
+  "verblassten": [
+   7
+  ],
+  "verfasst": [
+   6
+  ],
+  "verfasste": [
+   6
+  ],
+  "verfasstes": [
+   6
+  ],
+  "vergesst": [
+   6
+  ],
+  "vergisst": [
+   6
+  ],
+  "verhasste": [
+   6
+  ],
+  "verkaufstisch": [
+   7
+  ],
+  "verlasst": [
+   6
+  ],
+  "verlässt": [
+   6
+  ],
+  "vermisst": [
+   6
+  ],
+  "vermisste": [
+   6
+  ],
+  "vermissten": [
+   6
+  ],
+  "vermisstenanzeige": [
+   6
+  ],
+  "verpasst": [
+   6
+  ],
+  "verpasste": [
+   6
+  ],
+  "verpassten": [
+   6
+  ],
+  "verzweiflungstat": [
+   12
+  ],
+  "vorabendserie": [
+   11
+  ],
+  "wachstum": [
+   4
+  ],
+  "wartehäuschen": [
+   8
+  ],
+  "weihnachtsferien": [
+   13
+  ],
+  "weihnachtstag": [
+   9
+  ],
+  "weiterwusste": [
+   9
+  ],
+  "wisst": [
+   3
+  ],
+  "wohnungstür": [
+   7
+  ],
+  "wusst": [
+   3
+  ],
+  "wusste": [
+   3
+  ],
+  "wussten": [
+   3
+  ],
+  "wusstest": [
+   3
+  ],
+  "wusstet": [
+   3
+  ],
+  "wüsste": [
+   3
+  ],
+  "wüssten": [
+   3
+  ],
+  "wüsstest": [
+   3
+  ],
+  "wüsstet": [
+   3
+  ],
+  "zaubererfamilie": [
+   13
+  ],
+  "zaubererfamilien": [
+   13
+  ],
+  "zeremonien": [
+   7
+  ],
+  "zickzacklinien": [
+   11
+  ],
+  "ziellinie": [
+   7
+  ],
+  "zulässt": [
+   5
+  ],
+  "zusammengefasst": [
+   13
+  ],
+  "zusammengepresst": [
+   14
+  ],
+  "zusammengepressten": [
+   14
+  ],
+  "überlasst": [
+   7
+  ],
+  "überlässt": [
+   7
+  ]
+ }
+}

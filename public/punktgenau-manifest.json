@@ -1,0 +1,16 @@
+{
+  "name": "Punktgenau - Brailleschrift lernen",
+  "short_name": "Punktgenau",
+  "description": "Die Brailleschrift Schritt für Schritt lernen, von Sensorik",
+  "start_url": "/programme/punktgenau",
+  "scope": "/programme/punktgenau",
+  "display": "standalone",
+  "background_color": "#FBFBFD",
+  "theme_color": "#FBFBFD",
+  "lang": "de",
+  "icons": [
+    { "src": "/punktgenau-logo-180.png?v=2", "sizes": "180x180", "type": "image/png" },
+    { "src": "/punktgenau-logo-512.png?v=2", "sizes": "512x512", "type": "image/png" },
+    { "src": "/punktgenau-logo.svg?v=2", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

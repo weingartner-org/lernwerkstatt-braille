@@ -1,0 +1,262 @@
+/**
+ * Rechengeschichten für Englisch - NEU geschrieben, nicht übersetzt
+ * (Bauplan 2026-11-06 §5 Nr. 4: „Textaufgaben je Sprache neu, mit Namen und
+ * Dingen, die dort üblich sind").
+ *
+ * ★ Dieselben Pakete und dieselben Zahlenräume wie `sachaufgaben.ts` (je
+ *   Stufe), gleiche Regeln: kurze Sätze, jeder Satz eine Zeile, die Zahlen als
+ *   Ziffern, Namen ohne Rollenbild.
+ * ★ England: Pfund und Pence, Meilen, Kekse, Kastanien, Busse. „VAT" statt
+ *   „Steuer". Keine österreichischen Dinge (kein „Nachlass", keine „dag").
+ * ★★ DIE ANTWORT IST EINE BLOSSE ZAHL. Die Frage nennt die Einheit („How many
+ *   pounds ...?"). Grund: UEB hat im Befund keine belegte Zelle für das
+ *   Pfundzeichen und keine Regel für Einheiten-Buchstaben (siehe Kopf von
+ *   `braille/ueb.ts`) - eine Antwort mit Einheit könnte ein Kind in Braille
+ *   nicht schreiben. Der Text steht über dem Feld und läuft in der Tabelle des
+ *   Kindes; er braucht keine Mathe-Zellen.
+ * ★ Kein Rest: Aufgaben mit Rest gibt es in Englisch nicht (keine Norm).
+ */
+import type { SachVorlage } from "./sachaufgaben";
+
+/** Namen aus England - kurz, verschieden, ohne Rollenbild. */
+export const NAMEN_EN = [
+  "Oliver", "Amelia", "Harry", "Isla", "Jack", "Poppy", "Archie", "Freya", "George", "Lily",
+  "Noah", "Ava", "Charlie", "Grace", "Alfie", "Ruby", "Oscar", "Evie", "Leo", "Priya",
+];
+
+const STUFE1: SachVorlage[] = [
+  { text: "{n} has {a} conkers. {n} finds {b} more. How many are there now?",
+    op: "plus", a: [3, 12], b: [2, 8], rechne: (a, b) => a + b },
+  { text: "There are {a} biscuits on the plate. {n} eats {b}. How many are left?",
+    op: "minus", a: [6, 18], b: [2, 6], rechne: (a, b) => a - b, passt: (a, b) => a > b },
+  { text: "{n} has {a} football stickers. A friend gives {n} {b} more. How many is that?",
+    op: "plus", a: [5, 12], b: [3, 8], rechne: (a, b) => a + b },
+  { text: "{a} children play in the playground. {b} go in for lunch. How many are left?",
+    op: "minus", a: [8, 20], b: [2, 8], rechne: (a, b) => a - b, passt: (a, b) => a > b },
+  { text: "{n} has {a} pence. {n} finds {b} pence. How many pence does {n} have now?",
+    op: "plus", a: [4, 12], b: [3, 8], rechne: (a, b) => a + b },
+  { text: "{a} people are on the bus. {b} get off at the stop. How many are still on?",
+    op: "minus", a: [8, 20], b: [2, 7], rechne: (a, b) => a - b, passt: (a, b) => a > b },
+  { text: "{n} bakes {a} scones. Then {b} more. How many scones is that?",
+    op: "plus", a: [5, 12], b: [3, 8], rechne: (a, b) => a + b },
+  { text: "{n} needs {a} beads. {n} has {b}. How many more does {n} need?",
+    op: "minus", a: [10, 20], b: [3, 9], rechne: (a, b) => a - b, passt: (a, b) => a > b },
+  { text: "{a} ducks swim on the pond. {b} swim away. How many are left?",
+    op: "minus", a: [9, 20], b: [3, 8], rechne: (a, b) => a - b, passt: (a, b) => a > b },
+  { text: "There are {a} cows in the field. {b} more come in. How many cows now?",
+    op: "plus", a: [4, 12], b: [2, 8], rechne: (a, b) => a + b },
+];
+
+const STUFE2: SachVorlage[] = [
+  { text: "The class has {a} books. {b} more arrive. How many books are there now?",
+    op: "plus", a: [20, 70], b: [10, 30], rechne: (a, b) => a + b },
+  { text: "{n} has saved {a} pence. {n} spends {b}. How many pence are left?",
+    op: "minus", a: [30, 95], b: [10, 28], rechne: (a, b) => a - b, passt: (a, b) => a > b },
+  { text: "A bag has {a} nuts. {n} takes out {b}. How many are left in the bag?",
+    op: "minus", a: [40, 99], b: [12, 35], rechne: (a, b) => a - b, passt: (a, b) => a > b },
+  { text: "{n} runs {a} metres. Then {b} metres more. How many metres is that?",
+    op: "plus", a: [20, 60], b: [15, 40], rechne: (a, b) => a + b },
+  { text: "{n} puts {b} eggs in each box. {a} boxes are full. How many eggs is that?",
+    op: "mal", a: [3, 9], b: [2, 10], rechne: (a, b) => a * b },
+  { text: "{a} biscuits go onto {b} plates. How many go on one plate?",
+    op: "geteilt", a: [12, 60], b: [2, 6], rechne: (a, b) => a / b, passt: (a, b) => a % b === 0 },
+  { text: "Each row has {b} chairs. There are {a} rows. How many chairs is that?",
+    op: "mal", a: [3, 9], b: [3, 10], rechne: (a, b) => a * b },
+  { text: "{n} has {a} cards. {n} loses {b}. How many cards are left?",
+    op: "minus", a: [40, 90], b: [15, 30], rechne: (a, b) => a - b, passt: (a, b) => a > b },
+  { text: "{b} children share {a} apples. How many does each child get?",
+    op: "geteilt", a: [12, 60], b: [3, 6], rechne: (a, b) => a / b, passt: (a, b) => a % b === 0 },
+  { text: "{n} has read {a} pages. The book has {b} pages. How many pages are left?",
+    op: "minus", a: [20, 60], b: [70, 99], rechne: (a, b) => b - a, passt: (a, b) => b > a },
+  { text: "A bus carries {a} people. {b} more get on. How many people are on it now?",
+    op: "plus", a: [20, 60], b: [8, 25], rechne: (a, b) => a + b },
+];
+
+const STUFE3: SachVorlage[] = [
+  { text: "A school has {a} children. {b} come by bus. {c} walk. How many come by bike?",
+    op: "minus", a: [300, 900], b: [80, 300], c: [50, 250], rechne: (a, b, c) => a - b - c,
+    passt: (a, b, c) => a - b - c > 0 },
+  { text: "{n} scores {a} points. Then {b} more. Then {n} loses {c}. How many are left?",
+    op: "gemischt", a: [120, 500], b: [60, 300], c: [40, 200], rechne: (a, b, c) => a + b - c,
+    passt: (a, b, c) => a + b - c > 0 && a + b <= 1000 },
+  { text: "A book has {a} pages. {n} reads {b}. The next day {n} reads {c}. How many pages are left?",
+    op: "minus", a: [200, 900], b: [50, 200], c: [40, 180], rechne: (a, b, c) => a - b - c,
+    passt: (a, b, c) => a - b - c > 0 },
+  { text: "A shop has {a} bottles. {b} crates of {c} bottles arrive. How many bottles are there now?",
+    op: "gemischt", a: [100, 400], b: [3, 9], c: [6, 12], rechne: (a, b, c) => a + b * c,
+    passt: (a, b, c) => a + b * c <= 1000 },
+  { text: "{n} has {a} pence. {n} buys {b} pencils at {c} pence each. How many pence are left?",
+    op: "gemischt", a: [50, 200], b: [3, 8], c: [4, 12], rechne: (a, b, c) => a - b * c,
+    passt: (a, b, c) => a - b * c > 0 },
+  { text: "A hall has {b} rows of {c} chairs. {a} chairs are taken. How many are free?",
+    op: "gemischt", a: [50, 300], b: [8, 20], c: [10, 25], rechne: (a, b, c) => b * c - a,
+    passt: (a, b, c) => b * c - a > 0 && b * c <= 1000 },
+  { text: "{a} apples go into {b} boxes. How many apples are in one box?",
+    op: "geteilt", a: [120, 600], b: [4, 10], c: [0, 0], rechne: (a, b) => a / b,
+    passt: (a, b) => a % b === 0 },
+  { text: "{n} saves {c} pence a week for {b} weeks. Then {n} is given {a} pence. How many pence is that?",
+    op: "gemischt", a: [20, 150], b: [5, 15], c: [4, 20], rechne: (a, b, c) => a + b * c,
+    passt: (a, b, c) => a + b * c <= 1000 },
+  { text: "A train has {b} carriages with {c} seats each. {a} seats are taken. How many are free?",
+    op: "gemischt", a: [50, 300], b: [5, 12], c: [20, 60], rechne: (a, b, c) => b * c - a,
+    passt: (a, b, c) => b * c - a > 0 && b * c <= 1000 },
+  { text: "{a} children go on a trip. Each coach holds {b}. How many coaches do they need?",
+    op: "geteilt", a: [60, 400], b: [20, 50], c: [0, 0], rechne: (a, b) => Math.ceil(a / b),
+    passt: (a, b) => a > b },
+];
+
+const STUFE4: SachVorlage[] = [
+  { text: "A town has {a} people. {b} move in and {c} move out. How many people live there now?",
+    op: "gemischt", a: [20000, 90000], b: [500, 4000], c: [400, 3000], rechne: (a, b, c) => a + b - c },
+  { text: "A factory makes {b} wheels a day. How many wheels is that in {c} days?",
+    op: "mal", a: [0, 0], b: [120, 900], c: [10, 40], rechne: (_a, b, c) => b * c },
+  { text: "{a} leaflets go to {b} schools. How many does each school get?",
+    op: "geteilt", a: [1200, 90000], b: [4, 25], c: [0, 0], rechne: (a, b) => a / b,
+    passt: (a, b) => a % b === 0 },
+  { text: "{n} counts visitors: {a}, {b} and {c}. What is the mean?",
+    op: "gemischt", a: [300, 5000], b: [300, 5000], c: [300, 5000], rechne: (a, b, c) => (a + b + c) / 3,
+    passt: (a, b, c) => (a + b + c) % 3 === 0 },
+  { text: "A field is {b} metres long and {c} metres wide. How many square metres is it?",
+    op: "mal", a: [0, 0], b: [40, 400], c: [20, 200], rechne: (_a, b, c) => b * c },
+  { text: "{n} drives {b} miles there and back, {c} times a year. How many miles is that?",
+    op: "gemischt", a: [0, 0], b: [40, 500], c: [4, 20], rechne: (_a, b, c) => 2 * b * c },
+  { text: "A hall holds {a} people. {b} seats are taken. How many seats are free?",
+    op: "minus", a: [2000, 60000], b: [500, 1900], c: [0, 0], rechne: (a, b) => a - b,
+    passt: (a, b) => a > b },
+  { text: "A crate weighs {c} kilograms. A lorry carries {b} crates. How many kilograms is that?",
+    op: "mal", a: [0, 0], b: [50, 400], c: [8, 40], rechne: (_a, b, c) => b * c },
+  { text: "{a} people come to a fair. Each pays {b} pounds. How many pounds is that?",
+    op: "mal", a: [200, 3000], b: [3, 25], c: [0, 0], rechne: (a, b) => a * b },
+  { text: "A book costs {b} pounds. A school buys {c}. It gets {a} pounds off. How many pounds does it pay?",
+    op: "gemischt", a: [50, 400], b: [10, 40], c: [20, 120], rechne: (a, b, c) => b * c - a,
+    passt: (a, b, c) => b * c - a > 0 },
+];
+
+const STUFE5: SachVorlage[] = [
+  { text: "A loaf costs £{b}.{c}. {n} buys {a} loaves. How many pounds is that?",
+    op: "mal", a: [2, 6], b: [2, 5], c: [10, 90],
+    rechne: (a, b, c) => a * (b + c / 100), passt: (_a, _b, c) => c % 10 === 0, nachkomma: 2 },
+  { text: "{n} runs {b} laps of {c} metres. How many kilometres is that?",
+    op: "gemischt", a: [0, 0], b: [4, 12], c: [250, 800],
+    rechne: (_a, b, c) => (b * c) / 1000, passt: (_a, b, c) => (b * c) % 100 === 0, nachkomma: 2 },
+  { text: "A bag of potatoes weighs {b}.{c} kilograms. {n} buys {a} bags. How many kilograms is that?",
+    op: "mal", a: [2, 5], b: [3, 12], c: [10, 90],
+    rechne: (a, b, c) => a * (b + c / 100), passt: (_a, _b, c) => c % 10 === 0, nachkomma: 2 },
+  { text: "A film lasts {b} minutes. {n} watches {a} episodes. How many minutes is that?",
+    op: "mal", a: [3, 8], b: [22, 55], c: [0, 0], rechne: (a, b) => a * b },
+  { text: "{n} has £{a}. A comic costs £{b}.{c}. How many comics can {n} buy?",
+    op: "geteilt", a: [10, 40], b: [1, 4], c: [20, 80],
+    rechne: (a, b, c) => Math.floor(a / (b + c / 100)), passt: (_a, _b, c) => c % 10 === 0 },
+  { text: "A piece of cloth is {b}.{c} metres long. {n} needs {a} pieces. How many metres is that?",
+    op: "mal", a: [2, 5], b: [1, 6], c: [10, 90],
+    rechne: (a, b, c) => a * (b + c / 100), passt: (_a, _b, c) => c % 10 === 0, nachkomma: 2 },
+  { text: "{a} litres of juice go into bottles of {b} litres. How many bottles fill up?",
+    op: "geteilt", a: [6, 40], b: [1, 3], c: [0, 0], rechne: (a, b) => Math.floor(a / b) },
+  { text: "The journey takes {b} hours and {c} minutes. {n} goes there and back. How many minutes is that in all?",
+    op: "mal", a: [0, 0], b: [1, 4], c: [10, 50],
+    rechne: (_a, b, c) => 2 * (b * 60 + c), passt: (_a, _b, c) => c % 5 === 0 },
+  { text: "A kilogram of apples costs £{b}.{c}. {n} buys {a} kilograms. How many pounds does {n} pay?",
+    op: "mal", a: [2, 6], b: [1, 4], c: [20, 90],
+    rechne: (a, b, c) => a * (b + c / 100), passt: (_a, _b, c) => c % 10 === 0, nachkomma: 2 },
+  { text: "{n} takes {b} steps of {c} centimetres. How many metres is that?",
+    op: "gemischt", a: [0, 0], b: [200, 900], c: [50, 80],
+    rechne: (_a, b, c) => (b * c) / 100, passt: (_a, b, c) => (b * c) % 10 === 0, nachkomma: 1 },
+];
+
+const STUFE6: SachVorlage[] = [
+  { text: "A coat costs £{a}. There is {b}% off. How many pounds does it cost now?",
+    op: "prozent", a: [40, 300], b: [10, 50], c: [0, 0],
+    rechne: (a, b) => a - (a * b) / 100, passt: (a, b) => (a * b) % 100 === 0 },
+  { text: "Of {a} children, {b}% cycle to school. How many children is that?",
+    op: "prozent", a: [50, 400], b: [10, 60], c: [0, 0],
+    rechne: (a, b) => (a * b) / 100, passt: (a, b) => (a * b) % 100 === 0 },
+  { text: "{n} reads {b} quarters of a book with {a} pages. How many pages is that?",
+    op: "bruch", a: [40, 400], b: [1, 3], c: [0, 0],
+    rechne: (a, b) => (a * b) / 4, passt: (a, b) => (a * b) % 4 === 0 },
+  { text: "A field is {a} square metres. {b} fifths are planted. How many square metres is that?",
+    op: "bruch", a: [100, 900], b: [1, 4], c: [0, 0],
+    rechne: (a, b) => (a * b) / 5, passt: (a, b) => (a * b) % 5 === 0 },
+  { text: "A price of £{a} goes up by {b}%. How many pounds is it now?",
+    op: "prozent", a: [40, 400], b: [5, 30], c: [0, 0],
+    rechne: (a, b) => a + (a * b) / 100, passt: (a, b) => (a * b) % 100 === 0 },
+  { text: "There are {a} litres of juice. {n} drinks {b} eighths of it. How many litres are left?",
+    op: "bruch", a: [8, 40], b: [1, 5], c: [0, 0],
+    rechne: (a, b) => a - (a * b) / 8, passt: (a, b) => (a * b) % 8 === 0 },
+  { text: "{b}% of a class is {c} children. How many children are in the class?",
+    op: "prozent", a: [0, 0], b: [20, 50], c: [4, 15],
+    rechne: (_a, b, c) => (c * 100) / b, passt: (_a, b, c) => (c * 100) % b === 0 },
+  { text: "A path is {a} miles long. {n} has walked {b} thirds of it. How many miles is that?",
+    op: "bruch", a: [9, 90], b: [1, 2], c: [0, 0],
+    rechne: (a, b) => (a * b) / 3, passt: (a, b) => (a * b) % 3 === 0 },
+  { text: "{n} gives {b}% of £{a} to charity. How many pounds are left?",
+    op: "prozent", a: [50, 500], b: [5, 40], c: [0, 0],
+    rechne: (a, b) => a - (a * b) / 100, passt: (a, b) => (a * b) % 100 === 0 },
+  { text: "A box has {a} sweets. {b} tenths are red. How many sweets are red?",
+    op: "bruch", a: [20, 300], b: [1, 7], c: [0, 0],
+    rechne: (a, b) => (a * b) / 10, passt: (a, b) => (a * b) % 10 === 0 },
+];
+
+const STUFE7: SachVorlage[] = [
+  { text: "A number times {b}, plus {c}, makes {a}. What is the number?",
+    op: "gemischt", a: [20, 400], b: [2, 9], c: [3, 40],
+    rechne: (a, b, c) => (a - c) / b, passt: (a, b, c) => a - c > 0 && (a - c) % b === 0 },
+  { text: "Two numbers add up to {a}. One is {b} more than the other. What is the smaller one?",
+    op: "gemischt", a: [40, 400], b: [4, 60], c: [0, 0],
+    rechne: (a, b) => (a - b) / 2, passt: (a, b) => (a - b) > 0 && (a - b) % 2 === 0 },
+  { text: "{n} pays £{a} for {b} tickets and a £{c} fee. How many pounds does one ticket cost?",
+    op: "gemischt", a: [50, 400], b: [3, 12], c: [2, 20],
+    rechne: (a, b, c) => (a - c) / b, passt: (a, b, c) => (a - c) > 0 && (a - c) % b === 0 },
+  { text: "A rectangle has a perimeter of {a} metres. One side is {b} metres. How many metres is the other side?",
+    op: "gemischt", a: [20, 200], b: [4, 40], c: [0, 0],
+    rechne: (a, b) => a / 2 - b, passt: (a, b) => a % 2 === 0 && a / 2 - b > 0 },
+  { text: "{n} is {b} years old. Mum is three times as old as {n}. How old is Mum in {c} years?",
+    op: "gemischt", a: [0, 0], b: [8, 16], c: [2, 10],
+    rechne: (_a, b, c) => 3 * b + c, passt: () => true },
+  { text: "A number minus {b} is three times {c}. What is the number?",
+    op: "gemischt", a: [0, 0], b: [5, 60], c: [3, 30],
+    rechne: (_a, b, c) => b + 3 * c, passt: () => true },
+  { text: "{a} litres fill {b} cans. {c} litres are left over. How many litres does one can hold?",
+    op: "gemischt", a: [40, 400], b: [3, 10], c: [1, 15],
+    rechne: (a, b, c) => (a - c) / b, passt: (a, b, c) => (a - c) > 0 && (a - c) % b === 0 },
+  { text: "Double a number, plus {b}, is {a}. What is the number?",
+    op: "gemischt", a: [20, 300], b: [4, 50], c: [0, 0],
+    rechne: (a, b) => (a - b) / 2, passt: (a, b) => (a - b) > 0 && (a - b) % 2 === 0 },
+];
+
+const STUFE8: SachVorlage[] = [
+  { text: "A phone costs £{a}. Add {b}% VAT. How many pounds is that in all?",
+    op: "prozent", a: [100, 900], b: [10, 20], c: [0, 0],
+    rechne: (a, b) => a + (a * b) / 100, passt: (a, b) => (a * b) % 100 === 0 },
+  { text: "{n} puts £{a} in the bank at {b}% a year. How many pounds are there after one year?",
+    op: "prozent", a: [500, 9000], b: [1, 6], c: [0, 0],
+    rechne: (a, b) => a + (a * b) / 100, passt: (a, b) => (a * b) % 100 === 0 },
+  { text: "A car uses {b} litres per 100 miles. How many litres does it use for {a} miles?",
+    op: "gemischt", a: [200, 900], b: [4, 9], c: [0, 0],
+    rechne: (a, b) => (a * b) / 100, passt: (a, b) => (a * b) % 100 === 0 },
+  { text: "A room is {b} m long, {c} m wide and {a} m high. How many cubic metres of air are in it?",
+    op: "mal", a: [2, 4], b: [3, 8], c: [3, 7], rechne: (a, b, c) => a * b * c },
+  { text: "{a} people share £{b} fairly. How many pounds does each person get?",
+    op: "geteilt", a: [3, 25], b: [120, 9000], c: [0, 0],
+    rechne: (a, b) => b / a, passt: (a, b) => b % a === 0 },
+  { text: "A price falls from £{a} to £{b}. By how many percent is that?",
+    op: "prozent", a: [100, 100], b: [10, 90], c: [0, 0],
+    rechne: (a, b) => ((a - b) * 100) / a, passt: (a, b) => a > b },
+  { text: "A roll has {a} metres of wire. {n} cuts {b} pieces of {c} metres. How many metres are left?",
+    op: "gemischt", a: [50, 500], b: [3, 15], c: [2, 20],
+    rechne: (a, b, c) => a - b * c, passt: (a, b, c) => a - b * c > 0 },
+  { text: "A tank holds {a} litres. It is {b}% full. How many litres are missing?",
+    op: "prozent", a: [50, 900], b: [20, 80], c: [0, 0],
+    rechne: (a, b) => a - (a * b) / 100, passt: (a, b) => (a * b) % 100 === 0 },
+];
+
+/** Alle englischen Vorlagen, nach Paket - dieselben Schlüssel wie `SACHAUFGABEN`. */
+export const SACHAUFGABEN_EN: Record<string, SachVorlage[]> = {
+  "1-18": STUFE1,
+  "2-21": STUFE2,
+  "3-21": STUFE3,
+  "4-18": STUFE4,
+  "5-19": STUFE5,
+  "6-24": STUFE6,
+  "7-20": STUFE7,
+  "8-20": STUFE8,
+};

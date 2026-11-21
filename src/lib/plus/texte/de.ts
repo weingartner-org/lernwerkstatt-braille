@@ -1,0 +1,238 @@
+/**
+ * Plus auf Deutsch - der Bestand, wörtlich (Wächter:
+ * `tests/plus-deutsch-unveraendert.test.tsx`). Nichts hier ändern, ohne dass
+ * Johannes es sagt.
+ */
+import { ZEICHENABSTAND_LABELS } from "@/lib/typing/zeichenabstand";
+import { PLUS_LOGO_BESCHREIBUNG } from "@/components/PlusLogo";
+import type { PlusTexte } from "./typ";
+
+export const de: PlusTexte = {
+  sprache: "de",
+  stufe: (nr) => `${nr}. Schulstufe`,
+  zurueck: "Zurück",
+  logoBeschreibung: PLUS_LOGO_BESCHREIBUNG,
+
+  start: {
+    hallo: (v) => `Hallo ${v}!`,
+    willkommen: "Willkommen bei Plus!",
+    wiederDa: "Schön, dass du wieder da bist.",
+    neu: "Rechnen im Kopf. Ohne Uhr, ohne Druck.",
+    fuerAlleKopf: "Übung für die Klasse",
+    fuerAlleAnzahl: (n) => `${n} Aufgaben. Alle rechnen dieselben.`,
+    losGeht: "Los geht's",
+    trainingMarke: (stufe) => `Mein Training${stufe !== null ? ` · ${stufe}. Schulstufe` : ""}`,
+    trainingSucht: "Plus sucht die Aufgaben aus.",
+    etappe: (nr, name) => `Etappe ${nr}: ${name}`,
+    allesGeschafft: "Alles geschafft!",
+    rundeInfo: "8 Aufgaben je Runde. Keine Uhr.",
+    weiterrechnen: "Weiterrechnen",
+    etappenGeschafft: (g, n) => `${g} von ${n} Etappen geschafft.`,
+    wochenzielTitel: "Wochenziel",
+    wochenstand: (g, z) => (g >= z ? `Wochenziel geschafft: ${g} von ${z}.` : `Diese Woche: ${g} von ${z} Aufgaben.`),
+    oder: "Oder lieber …",
+    wahlTitel: "Ich wähle",
+    wahlSatz: "Such dir eine Übung aus.",
+    spieleTitel: "Spiele",
+    spieleSatz: "Rechnen, aber anders.",
+    sammlungTitel: "Meine Sammlung",
+    sammlungLeer: "Abzeichen und Wochenziel.",
+    sammlungAnzahl: (n) => `${n} Abzeichen.`,
+    anmeldenSatz: "Melde dich an. Dann ist dein Weg auf jedem Gerät da.",
+    anmelden: "Anmelden",
+  },
+
+  stufenwahl: {
+    trainingTitel: "Mein Training - welche Schulstufe?",
+    trainingHinweis: "Plus mischt den Lauf aus dem, was du schon kannst, dem Nächsten und einer Wiederholung.",
+  },
+
+  wahl: {
+    stufenTitel: "Welche Schulstufe?",
+    paketTitel: (stufe) => `${stufe} - welche Übung?`,
+    offen: (n) => (n === 1 ? "Eine Übung dieser Stufe ist noch nicht fertig." : `${n} Übungen dieser Stufe sind noch nicht fertig.`),
+    feste: "Die Schulstufe stellt deine Lehrkraft ein.",
+    andere: "Andere Schulstufe",
+  },
+
+  seite: {
+    bereichTraining: "Mein Training",
+    bereichWahl: "Ich wähle",
+    bereichStart: "Start",
+    bereichFuerAlle: "Übung für die Klasse",
+    einstellungen: "Einstellungen",
+    einstellungenZurueck: "Zurück zum Rechnen",
+    stimmeFehlt: "Auf diesem Gerät ist keine deutsche Stimme installiert.",
+    vorlesenAn: "Vorlesen ist an.",
+    stimmeHinweis: "Deine Sprachausgabe liest Rechenzeichen nicht mit. Die Stimme von Plus schon.",
+    fuerAlleGestartet: "Deine Lehrkraft hat eine Übung für die Klasse gestartet.",
+    passwortTitel: "Passwort ändern",
+    hilfeTitel: "Plus - Hilfe",
+  },
+
+  uebung: {
+    fallbackTitel: "Mein Training",
+    nochNichts: "Da steht noch nichts.",
+    luecke: "Eine Lücke ist noch leer.",
+    veraendert: "Vorne hat sich die Rechnung verändert. Zweimal Umschalt holt sie zurück.",
+    richtig: "Richtig.",
+    fastRichtig: (s) => `Fast richtig. Man schreibt es: ${s}.`,
+    einheit: (h) => `Richtig gerechnet - ${h ?? "achte auf die Einheit"}.`,
+    restFehlt: "Richtig gerechnet - der Rest fehlt noch.",
+    nochNicht: (h) => `Noch nicht. ${h}`,
+    nochNichtLeer: "Noch nicht. Schau es dir noch einmal an.",
+    uebersprungen: "Übersprungen.",
+    aufgabeKurz: (k) => `Aufgabe: ${k}`,
+    etappeVon: (nr, g) => `Etappe ${nr} von ${g}.`,
+    aufgabeVon: (nr, g) => `Aufgabe ${nr} von ${g}.`,
+    aufgabeLabel: (nr, g) => `Aufgabe ${nr} von ${g}`,
+    danachRaetsel: "Danach kommt ein Rätsel.",
+    genug: "Für heute ist genug. Komm morgen wieder.",
+    raetselVorspann: (r, g) => `${r} von ${g} richtig. Jetzt kommt ein Rätsel.`,
+    geschafft: "Geschafft",
+    richtigVon: (r, g) => `${r} von ${g} richtig.`,
+    uebersprungenSatz: (n) => ` ${n === 1 ? "Eine Aufgabe" : `${n} Aufgaben`} übersprungen.`,
+    rundenBis: (n) => (n === 1 ? "Nach der nächsten Runde kommt ein Rätsel." : `Noch ${n} Runden bis zum Rätsel.`),
+    weiterNaechste: "Weiter - nächste Runde",
+    andereUebung: "Andere Übung wählen",
+    genugHeute: "Genug für heute",
+    nochDurchgang: "Noch ein Durchgang",
+    danachMarke: (r) => (r ? "danach: Rätsel" : "danach: Überblick"),
+    danachSatz: (nr, gesamt, raetsel) => {
+      const rest = gesamt - nr;
+      const noch = rest === 0 ? "Das ist die letzte." : rest === 1 ? "Noch eine danach." : `Noch ${rest} danach.`;
+      return `${noch}${raetsel ? " Danach kommt ein Rätsel." : ""}`;
+    },
+    merke: "Merke:",
+    zeigWeg: "Zeig mir den Rechenweg",
+    nochSchritt: "Noch ein Schritt",
+    nochmalAnsagen: "Aufgabe noch einmal ansagen",
+    tastenExtra: "Umschalttaste zweimal: Aufgabe noch einmal - die Rechnung steht wieder im Feld",
+    weiter: "Weiter",
+    pruefen: "Prüfen",
+    loesungEine: (l) => `Eine Lösung ist ${l}.`,
+    loesung: (l) => `Die Lösung ist ${l}.`,
+    nichtWeiter: "Ich komme nicht weiter",
+    ueberspringen: "Aufgabe überspringen",
+    beenden: "Übung beenden",
+    etappeZeile: (nr, g, name) => `Etappe ${nr} von ${g}: ${name}`,
+  },
+
+  eingabe: {
+    arten: {
+      normal: "Zahlen tippen",
+      computer: "Computerbraille",
+      marburger: "Mathematikschrift, 6 Punkte",
+    },
+    antwort: "Deine Antwort",
+    tasteArt: "Alt + B wechselt die Eingabeart",
+    tasteGroesse: "Alt + Plus größer · Alt + Minus kleiner · Alt + 0 zurück",
+    tasteZeile: "Eingabetaste: neue Zeile · Alt + P prüft",
+    tasteZurueck: "Umschalttaste zweimal: Rechnung zurück",
+    artAnsage: (art, steht) => `${art}. ${steht ? "Die Rechnung steht wieder da." : "Das Feld ist wieder leer."}`,
+    anfang: "Am Anfang der Zeile.",
+    feldLeer: "Das Feld ist leer.",
+    geloescht: "gelöscht",
+    punkte: (p) => `Punkte ${p}`,
+    keineRechnung: "Hier gibt es keine Rechnung zum Zurückholen.",
+    rechnungDa: "Die Rechnung steht wieder da.",
+    soLese: "So lese ich das:",
+    nochNichts: "noch nichts",
+    tastenFuer: "Tasten für diese Übung",
+  },
+
+  einstellungen: {
+    gruppeEingabe: "Eingabe",
+    gruppeAnzeige: "Anzeige",
+    gruppeKlang: "Klang und Vorlesen",
+    braillezeile: "Arbeiten mit Braillezeile",
+    zeilenAn: "Die ganze Aufgabe steht im Eingabefeld - auch Textaufgaben. Die Zeilen brechen so um, dass du wenig springst. Du schreibst in die Lücke.",
+    zeilenAus: "Die Aufgabe steht oben, das Eingabefeld ist leer. Du tippst Ziffern und Rechenzeichen auf der Tastatur.",
+    unterwegsVor: "Unterwegs wechselt",
+    unterwegsNach: ".",
+    schrift: "Braille-Schrift",
+    schriftNamen: { computer: "Computerbraille (8 Punkte)", marburger: "6-Punkt-Braille (Mathematikschrift)" },
+    schriftErkl: (schrift, eingabe) => {
+      const aus = schrift === "computer"
+        ? "Die Aufgabe steht in Computerbraille im Feld - acht Punkte, jedes Zeichen ist eine Zelle, wie auf deiner Braillezeile."
+        : "Die Aufgabe steht in der Mathematikschrift mit sechs Punkten im Feld. Zahlen bekommen das Zahlzeichen davor - wie im Schulbuch.";
+      const ein = eingabe === "tastatur"
+        ? "Du tippst die Zahlen auf der Tastatur, im Feld wird daraus die Zelle."
+        : schrift === "computer"
+          ? "Du greifst mit F D S und J K L, dazu A und Ö für Punkt 7 und 8."
+          : "Du greifst mit sechs Punkten: F D S und J K L.";
+      return `${aus} ${ein}`;
+    },
+    wieDuSchreibst: "Wie du schreibst",
+    wegNamen: { tastatur: "Zahlen auf der Tastatur", braille: "Braille greifen" },
+    breite: "Braillezeile mit 40 oder 80 Zeichen",
+    breiteKurz: "Braillezeile",
+    breiteNamen: { 40: "40 Zeichen", 80: "80 Zeichen" },
+    breiteErkl: {
+      40: "Das Feld ist höchstens 40 Zeichen breit, wie eine Braillezeile mit 40 Zellen. Lange Aufgaben brechen öfter um.",
+      80: "Das Feld ist höchstens 80 Zeichen breit, wie eine Braillezeile mit 80 Zellen. Die meisten Aufgaben stehen auf einer Zeile.",
+    },
+    festgelegtNach: ". Das hat deine Lehrkraft für dich eingestellt.",
+    an: "an",
+    aus: "aus",
+    soSteht: (b) => `So steht ${b} im Feld:`,
+    ausschreiben: "Rechnungen ausschreiben",
+    ausschreibenJa: "Ja - in Worten: 48 plus 27 ist",
+    ausschreibenNein: "Nein - kurz: 48 +27 =",
+    ausschreibenErkl: "In Worten ist es für Kinder, die nur zuhören. Mit Braillezeile gilt die kurze Form - dort ist sie die bessere.",
+    textgroesse: "Textgröße",
+    prozent: (n) => `${n} Prozent`,
+    groesseA: "Macht die Aufgabe und das Eingabefeld größer, das übrige Programm bleibt. ",
+    groesseB: " größer, ",
+    groesseC: " kleiner, ",
+    groesseD: " zurück.",
+    abstand: "Zeichenabstand",
+    abstandErkl: "Mehr Platz zwischen den Zeichen, wenn sie ineinanderlaufen (CVI). Gilt auf diesem Gerät, auch in Tastenflow.",
+    schriftWahlName: "Schrift der Aufgabe und des Antwortfelds",
+    schriftWahlHinweis: "Ändert nur die Aufgabe und dein Antwortfeld - das Programm selbst bleibt, wie es ist. Gilt auf diesem Gerät.",
+    farbenA: "Farben und Kontrast: ",
+    farbenB: " oder der Farbschalter in der Kopfzeile.",
+    klangA: "Vorlesen, Sprechtempo, Lautstärke und Töne stellst du im Menü unter dem Lautsprecher in der Kopfzeile ein.",
+    klangB: " schaltet das Vorlesen direkt um, ",
+    klangC: " macht sofort still.",
+    strg: "Strg",
+    abstandNamen: ZEICHENABSTAND_LABELS,
+    region: "Land",
+    regionErkl: "Das Land ändert das Geld in den Rechengeschichten, ein paar Wörter, die Stimme und wie Zahlen gesprochen werden. Die Braille-Zellen bleiben gleich.",
+    regionNamen: {
+      es: "Spanien (Euro)", latam: "Lateinamerika (Pesos)",
+      fr: "Frankreich (Euro)", be: "Belgien (Euro)",
+      "ch-huitante": "Schweiz: Waadt, Wallis, Freiburg (Franken, huitante)",
+      "ch-quatre-vingts": "Schweiz: Genf, Neuenburg, Bern, Jura (Franken, quatre-vingts)",
+      ca: "Québec (Dollar)",
+    },
+  },
+
+  akustik: {
+    kopf: "Klang und Vorlesen",
+    probe: "So spricht Plus.",
+    vorlesenTitel: "Plus liest vor",
+    vorlesenErkl: (h) => `Plus sagt Aufgaben und Rückmeldungen mit eigener Stimme. ${h} Alt + V schaltet um, Strg macht sofort still.`,
+    tempo: "Sprechtempo",
+    tempoErkl: "Wie schnell die Stimme von Plus spricht. 100 % ist normal, weiter rechts ist schneller.",
+    lautStimme: "Lautstärke der Stimme",
+    lautStimmeErkl: "Wie laut die Stimme von Plus spricht. 100 % ist so laut, wie dein Gerät gerade eingestellt ist - lauter geht es nicht.",
+    toene: "Töne",
+    toeneErkl: "Ein kurzer Klang, wenn du richtig gerechnet hast. In den Spielen klingt auch der Zahlenstrahl. „Richtig“ steht immer auch da.",
+    lautToene: "Lautstärke der Töne",
+    lautToeneErkl: "Wie laut die Klänge sind. Bei 0 % bleibt es still, auch wenn die Töne an sind.",
+  },
+
+  hinweise: {
+    funktionsname: "Funktionsnamen wie log oder sin kennt Plus noch nicht.",
+    altesGeteilt: "Das alte Geteiltzeichen gilt nicht mehr. Nimm den Doppelpunkt.",
+    kommaOhneZahl: "Ein Komma ohne Zahl davor.",
+    bruchstrichZahlzeichen: "Nach dem Bruchstrich gehört ein Zahlzeichen vor die Zahl.",
+    griechisch: "Griechische Buchstaben kennt Plus nicht.",
+    schliesstOhneOffen: "Hier schließt ein Zeichen, das nichts offen hat.",
+    unbekanntesZeichen: "Dieses Zeichen kennt Plus nicht.",
+    klammerOffen: "Eine Klammer ist noch offen.",
+    kommaInZahl: "Ein Komma in einer Zahl: Plus weiß nicht, ob es ein Dezimalzeichen ist.",
+    buchstabeNichtGebaut: "Buchstaben und Einheiten gibt es in dieser Schrift noch nicht.",
+  },
+};
